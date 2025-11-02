@@ -1,0 +1,7 @@
+{
+    "recommendations": [
+        "sourcery.sourcery",
+        "ms-python.python",
+        "ms-python.vscode-pylance"
+    ]
+} 

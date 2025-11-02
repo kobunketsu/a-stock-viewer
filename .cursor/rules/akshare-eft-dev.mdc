@@ -1,0 +1,98 @@
+---
+description: akshare和ETF数据获取测试框架规范
+globs: ["**/*test*.py", "**/*_test.py", "**/test_*.py", "**/tests/**/*.py"]
+---
+
+# akshare和ETF测试框架规范
+
+## 🚨 自动应用规则
+**CRITICAL**: 当涉及akshare数据获取、ETF分析、技术指标计算等测试时，必须自动应用以下标准模板：
+
+### 标准测试模板
+```python
+python -c "
+import sys
+sys.path.insert(0, '/opt/homebrew/lib/python3.9/site-packages')
+
+import pandas as pd
+import numpy as np
+import akshare as ak
+from datetime import datetime, timedelta
+
+# 测试代码内容
+print('测试开始...')
+try:
+    # 具体测试逻辑
+    pass
+except Exception as e:
+    print(f'错误: {e}')
+    import traceback
+    traceback.print_exc()
+"
+```
+
+### 自动应用条件
+- ✅ 用户要求测试akshare数据获取功能
+- ✅ 用户要求测试ETF相关功能
+- ✅ 用户要求测试技术指标计算
+- ✅ 用户要求验证数据接口
+- ✅ 用户要求调试数据相关问题
+- ✅ 任何涉及pandas、numpy、akshare的测试场景
+
+### 核心组件
+1. **路径设置**: `sys.path.insert(0, '/opt/homebrew/lib/python3.9/site-packages')`
+2. **基础库导入**: pandas, numpy, akshare, datetime
+3. **错误处理**: 完整的try-except和traceback输出
+4. **调试信息**: 详细的print输出和错误追踪
+
+### 技术特点
+- **环境隔离**: 确保使用正确的Python包路径
+- **错误追踪**: 完整的异常信息和堆栈跟踪
+- **调试友好**: 详细的输出信息便于问题定位
+- **可重复性**: 标准化的测试环境确保结果一致
+
+## 数据获取测试规范
+
+### akshare接口测试
+```python
+# 测试ETF数据获取
+def test_etf_data():
+    try:
+        # 获取ETF实时行情
+        etf_data = ak.fund_etf_spot_em()
+        print(f"ETF数据获取成功，共{len(etf_data)}条记录")
+        return etf_data
+    except Exception as e:
+        print(f"ETF数据获取失败: {e}")
+        return None
+```
+
+### 技术指标测试
+```python
+# 测试RSI计算
+def test_rsi_calculation():
+    try:
+        # 获取股票数据
+        data = ak.stock_zh_a_hist(symbol="000001", period="daily", start_date="20240101", end_date="20241231")
+        
+        # 计算RSI
+        # ... RSI计算逻辑
+        
+        print("RSI计算测试成功")
+        return True
+    except Exception as e:
+        print(f"RSI计算测试失败: {e}")
+        return False
+```
+
+## 错误处理规范
+- 所有akshare API调用必须包含try-catch块
+- 使用`error_msg = str(e)`代替直接引用异常对象
+- 错误日志必须包含时间戳和详细上下文
+- 数据获取失败时提供降级方案
+
+## 性能优化
+- 使用缓存机制避免重复API调用
+- 批量处理数据减少内存占用
+- 异步处理大量数据获取任务
+- 合理使用pandas向量化操作

@@ -1,0 +1,39 @@
+{
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./grid_strategy_streamlit",
+        "-p",
+        "test*.py"
+    ],
+    "python.testing.pytestEnabled": false,
+    "python.testing.unittestEnabled": true,
+    "python.refactor.engine": "rope",
+    "python.analysis.indexing": true,
+    "python.analysis.packageIndexDepths": [2],
+    "sourcery.token": "user_1_ExPR6f_3pbYQXIegIrog6iyG5H6UZaJWzgUXAcrbBpiF2_jGAyYaquAZE",
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.diagnosticMode": "workspace",
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.completeFunctionParens": true,
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.inlayHints.variableTypes": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit"
+    },
+    "python.languageServer": "None",
+    "python.analysis.extraPaths": [
+        "./grid_strategy_tk/src",
+        "./grid_strategy_streamlit"
+    ],
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "ms-python.python",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    },
+    "sourcery.sourceryIgnoreTests": false,
+    "sourcery.sourceryEnableDebug": true,
+    "sourcery.metricsEnabled": true
+}

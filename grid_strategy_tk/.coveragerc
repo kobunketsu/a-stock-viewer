@@ -1,0 +1,17 @@
+[run]
+source = .
+omit = 
+    tests/*
+    */site-packages/*
+    */dist-packages/*
+    */python?.?/*
+    */lib-python/?.?/*.py
+
+[report]
+exclude_lines =
+    pragma: no cover
+    def __repr__
+    raise NotImplementedError
+    if __name__ == .__main__.:
+    pass
+    raise ImportError 

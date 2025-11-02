@@ -1,0 +1,173 @@
+---
+description: 对代码文件进行重构，函数在文件内，文件间进行移动等操作
+globs: 
+---
+
+# Your rule content
+
+# 代码重构移动规则
+
+## 0. 规则触发识别
+### 基础触发词
+- "移动代码" "move code"
+- "重构" "refactor"
+- "迁移" "relocate"
+- "提取" "extract"
+
+### 修饰词（可选）
+- "安全" "safe"
+- "准确" "accurate"
+- "完整" "completely"
+
+### 简单触发句式
+- "移动这段代码"
+- "重构到新文件"
+- "提取这个方法"
+- "安全迁移函数"
+
+## 1. 预处理阶段
+- 生成并分析代码结构图，确保理解代码的组织方式
+- 识别代码块的完整边界（开始和结束位置）
+- 分析代码块的依赖关系：
+  - 引用的变量和函数
+  - 使用的类型和接口
+  - 外部资源依赖
+- 判断是否为文件自身重构：
+  - 如果源文件和目标文件路径相同
+  - 创建临时工作副本
+  - 在副本上执行所有重构操作
+  - 完成后用副本替换原文件
+
+## 2. 移动前检查清单
+- 确认代码块是否为完整的逻辑单元
+- 检查目标位置的上下文兼容性
+- 验证移动是否会影响现有的导入关系
+- 确保不会破坏继承关系或接口实现
+- 对于文件自身重构：
+  - 验证副本文件的完整性
+  - 确保副本包含所有最新修改
+  - 检查副本的权限设置
+
+## 3. 移动操作流程
+1. 代码提取：
+   ```bash
+   # 如果是文件自身重构，先创建副本
+   if [ "$source_file" = "$target_file" ]; then
+     cp "$source_file" "${source_file}.temp"
+     target_file="${source_file}.temp"
+   fi
+   
+   # 定位代码位置
+   grep -n "标识符" "$source_file"
+   # 提取代码块到变量
+   extracted_code=$(sed -n '起始行,结束行p' "$source_file")
+   ```
+
+2. 验证提取的完整性：
+   ```bash
+   # 对比原始代码和提取的代码
+   diff <(sed -n '起始行,结束行p' "$source_file") <(echo "$extracted_code")
+   ```
+
+3. 应用代码到新位置：
+   - 保持原有的代码格式和缩进
+   - 调整相对路径引用
+   - 必要时调整访问修饰符
+
+4. 对于文件自身重构：
+   ```bash
+   # 完成所有修改后替换原文件
+   if [ -f "${source_file}.temp" ]; then
+     mv "${source_file}.temp" "$source_file"
+   fi
+   ```
+
+## 4. 移动后验证
+- 执行语法检查
+- 运行相关测试用例
+- 检查改动内容确保符合预期
+- 验证功能完整性
+- 对于文件自身重构：
+  - 确认原文件备份存在
+  - 验证替换后文件的完整性
+  - 检查文件权限是否保持一致
+
+## 5. 状态管理机制
+- 在内存中保存操作前的代码状态
+- 记录完整的移动操作步骤
+- 维护可回滚的操作栈
+- 每个操作步骤保存中间状态
+- 对于文件自身重构：
+  - 保存原文件的完整备份
+  - 记录所有在副本上的操作
+  - 维护可回滚到原文件的机制
+
+## 6. 最佳实践
+- 一次只移动一个完整的逻辑单元
+- 保持移动操作的原子性
+- 在移动后立即验证
+- 维护内存中的状态快照
+- 保持完整的操作日志
+- 文件自身重构注意事项：
+  - 始终在副本上操作
+  - 保持原文件备份
+  - 完整性验证贯穿始终
+  - 提供回滚机制
+
+## 7. 实际操作示例
+### 在命令行中执行代码移动
+```bash
+# 1. 处理文件自身重构
+if [ "$source_file" = "$target_file" ]; then
+  # 创建临时工作副本
+  cp "$source_file" "${source_file}.temp"
+  # 更新目标文件路径
+  target_file="${source_file}.temp"
+fi
+
+# 2. 提取代码到变量
+extracted_code=$(sed -n '29,83p' "$source_file")
+
+# 3. 查看提取的内容
+echo "$extracted_code"
+
+# 4. 验证提取的内容
+diff <(sed -n '29,83p' "$source_file") <(echo "$extracted_code")
+
+# 5. 使用提取的代码
+# 例如插入到另一个文件的指定位置
+sed -i "45i\\${extracted_code}" "$target_file"
+
+# 6. 验证插入结果
+diff <(echo "$extracted_code") <(sed -n '45,99p' "$target_file")
+
+# 7. 如果是文件自身重构，完成后替换原文件
+if [ "$source_file" = "$target_file" ]; then
+  mv "${source_file}.temp" "$source_file"
+fi
+```
+
+### 常用操作组合
+```bash
+# 提取并验证特定函数
+function_code=$(sed -n '/func targetFunction/,/^}/p' "$source_file")
+echo "$function_code" | grep -n .
+
+# 提取包含上下文的代码块
+context_code=$(sed -n "$((start_line-5)),$((end_line+5))p" "$source_file")
+
+# 保存操作状态
+operation_stack+=("$extracted_code")
+
+# 创建文件备份
+backup_file="${source_file}.bak"
+cp "$source_file" "$backup_file"
+```
+
+注意事项：
+- 使用双引号保留代码格式
+- 注意转义字符的处理
+- 验证每个步骤的输出
+- 保持操作的原子性
+- 始终保持文件备份
+- 完整性验证贯穿始终

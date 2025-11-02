@@ -1,0 +1,2129 @@
+{
+    "version": "v1.3.0",
+    "data": {
+        "159787": {
+            "timestamp": 1760523969.6220338,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "3连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+1.9%",
+                "next_day_limit_up_ma5_deviation": "+8.5%",
+                "intraday_trend": "破上轨4下轨0",
+                "cost_change": "+5.3%"
+            }
+        },
+        "159745": {
+            "timestamp": 1760523969.673764,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "3连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+2.0%",
+                "next_day_limit_up_ma5_deviation": "+8.7%",
+                "intraday_trend": "破上轨2下轨0",
+                "cost_change": "+3.7%"
+            }
+        },
+        "159207": {
+            "timestamp": 1760523969.934022,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "上3连阳",
+                "month_trend": "+5.3%",
+                "ma5_deviation": "+0.5%",
+                "next_day_limit_up_ma5_deviation": "+7.6%",
+                "intraday_trend": "破上轨0下轨0",
+                "cost_change": "+3.7%"
+            }
+        },
+        "159913": {
+            "timestamp": 1760523971.2944782,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "上2连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+0.1%",
+                "next_day_limit_up_ma5_deviation": "+7.6%",
+                "intraday_trend": "破上轨0下轨0",
+                "cost_change": "+7.6%"
+            }
+        },
+        "159309": {
+            "timestamp": 1760523971.685832,
+            "data": {
+                "day_trend": "上1连阳",
+                "week_trend": "上1连阳",
+                "month_trend": "+6.4%",
+                "ma5_deviation": "-0.2%",
+                "next_day_limit_up_ma5_deviation": "+7.2%",
+                "intraday_trend": "破上轨0下轨0",
+                "cost_change": "+1.0%"
+            }
+        },
+        "159945": {
+            "timestamp": 1760523971.741272,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "2连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+0.9%",
+                "next_day_limit_up_ma5_deviation": "+7.9%",
+                "intraday_trend": "破上轨2下轨0",
+                "cost_change": "+1.7%"
+            }
+        },
+        "159867": {
+            "timestamp": 1760523973.161739,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "3连阳",
+                "month_trend": "+10.1%",
+                "ma5_deviation": "+0.4%",
+                "next_day_limit_up_ma5_deviation": "+7.6%",
+                "intraday_trend": "破上轨1下轨0",
+                "cost_change": "+2.4%"
+            }
+        },
+        "159588": {
+            "timestamp": 1760523973.5173728,
+            "data": {
+                "day_trend": "上1连阳",
+                "week_trend": "上2连阳",
+                "month_trend": "+5.2%",
+                "ma5_deviation": "-0.0%",
+                "next_day_limit_up_ma5_deviation": "+7.3%",
+                "intraday_trend": "破上轨2下轨1",
+                "cost_change": "+2.3%"
+            }
+        },
+        "159502": {
+            "timestamp": 1760523973.666465,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "上2连阳",
+                "month_trend": "+10.7%",
+                "ma5_deviation": "-0.3%",
+                "next_day_limit_up_ma5_deviation": "+7.2%",
+                "intraday_trend": "破上轨4下轨0",
+                "cost_change": "+9.1%"
+            }
+        },
+        "159549": {
+            "timestamp": 1760523974.657187,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "2连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+0.8%",
+                "next_day_limit_up_ma5_deviation": "+7.9%",
+                "intraday_trend": "破上轨1下轨0",
+                "cost_change": "+5.7%"
+            }
+        },
+        "159589": {
+            "timestamp": 1760523977.232667,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "3连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+1.0%",
+                "next_day_limit_up_ma5_deviation": "+8.1%",
+                "intraday_trend": "破上轨0下轨2",
+                "cost_change": "+2.4%"
+            }
+        },
+        "159616": {
+            "timestamp": 1760523977.336843,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "上2连阳",
+                "month_trend": "-6.3%",
+                "ma5_deviation": "+0.3%",
+                "next_day_limit_up_ma5_deviation": "+7.6%",
+                "intraday_trend": "破上轨0下轨0",
+                "cost_change": "+0.6%"
+            }
+        },
+        "159827": {
+            "timestamp": 1760523977.400274,
+            "data": {
+                "day_trend": "上1连阳",
+                "week_trend": "上2连阳",
+                "month_trend": "-4.5%",
+                "ma5_deviation": "+0.0%",
+                "next_day_limit_up_ma5_deviation": "+7.4%",
+                "intraday_trend": "破上轨2下轨0",
+                "cost_change": "+3.1%"
+            }
+        },
+        "159228": {
+            "timestamp": 1760523978.553177,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "3连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+0.6%",
+                "next_day_limit_up_ma5_deviation": "+7.8%",
+                "intraday_trend": "破上轨1下轨0",
+                "cost_change": "+0.8%"
+            }
+        },
+        "159581": {
+            "timestamp": 1760523979.212158,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "+2.9%",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+1.1%",
+                "next_day_limit_up_ma5_deviation": "+8.1%",
+                "intraday_trend": "破上轨0下轨2",
+                "cost_change": "+2.3%"
+            }
+        },
+        "159697": {
+            "timestamp": 1760523979.589659,
+            "data": {
+                "day_trend": "上1连阳",
+                "week_trend": "上1连阳",
+                "month_trend": "+5.0%",
+                "ma5_deviation": "+0.2%",
+                "next_day_limit_up_ma5_deviation": "+7.5%",
+                "intraday_trend": "破上轨3下轨2",
+                "cost_change": "+2.9%"
+            }
+        },
+        "159698": {
+            "timestamp": 1760523980.4119081,
+            "data": {
+                "day_trend": "+5.3%",
+                "week_trend": "上2连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+0.1%",
+                "next_day_limit_up_ma5_deviation": "+7.3%",
+                "intraday_trend": "破上轨0下轨0",
+                "cost_change": "+2.0%"
+            }
+        },
+        "159515": {
+            "timestamp": 1760523980.982025,
+            "data": {
+                "day_trend": "+2.7%",
+                "week_trend": "2连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+1.1%",
+                "next_day_limit_up_ma5_deviation": "+8.1%",
+                "intraday_trend": "破上轨2下轨0",
+                "cost_change": "+1.6%"
+            }
+        },
+        "159587": {
+            "timestamp": 1760523981.2769852,
+            "data": {
+                "day_trend": "+3.0%",
+                "week_trend": "3连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+0.2%",
+                "next_day_limit_up_ma5_deviation": "+7.5%",
+                "intraday_trend": "破上轨1下轨2",
+                "cost_change": "+0.1%"
+            }
+        },
+        "159355": {
+            "timestamp": 1760523981.875842,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "2连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+1.0%",
+                "next_day_limit_up_ma5_deviation": "+8.1%",
+                "intraday_trend": "破上轨1下轨0",
+                "cost_change": "+1.0%"
+            }
+        },
+        "159275": {
+            "timestamp": 1760523984.278923,
+            "data": {
+                "day_trend": "+5.7%",
+                "week_trend": "2连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+0.4%",
+                "next_day_limit_up_ma5_deviation": "+7.6%",
+                "intraday_trend": "破上轨4下轨0",
+                "cost_change": "+0.5%"
+            }
+        },
+        "159332": {
+            "timestamp": 1760523984.742945,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "2连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+0.5%",
+                "next_day_limit_up_ma5_deviation": "+7.8%",
+                "intraday_trend": "破上轨2下轨0",
+                "cost_change": "+1.4%"
+            }
+        },
+        "159525": {
+            "timestamp": 1760523984.765795,
+            "data": {
+                "day_trend": "+2.8%",
+                "week_trend": "2连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+1.6%",
+                "next_day_limit_up_ma5_deviation": "+8.5%",
+                "intraday_trend": "破上轨1下轨0",
+                "cost_change": "+1.4%"
+            }
+        },
+        "159307": {
+            "timestamp": 1760523986.098779,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "2连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+0.7%",
+                "next_day_limit_up_ma5_deviation": "+7.9%",
+                "intraday_trend": "破上轨3下轨0",
+                "cost_change": "+0.9%"
+            }
+        },
+        "159647": {
+            "timestamp": 1760523986.693363,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "3连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+0.7%",
+                "next_day_limit_up_ma5_deviation": "+8.0%",
+                "intraday_trend": "破上轨1下轨0",
+                "cost_change": "-0.8%"
+            }
+        },
+        "159993": {
+            "timestamp": 1760523986.729346,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "上3连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+0.2%",
+                "next_day_limit_up_ma5_deviation": "+7.7%",
+                "intraday_trend": "破上轨2下轨0",
+                "cost_change": "+0.6%"
+            }
+        },
+        "159736": {
+            "timestamp": 1760523987.986181,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "3连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+1.0%",
+                "next_day_limit_up_ma5_deviation": "+8.2%",
+                "intraday_trend": "破上轨6下轨1",
+                "cost_change": "+1.0%"
+            }
+        },
+        "159930": {
+            "timestamp": 1760523988.586411,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "2连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+1.1%",
+                "next_day_limit_up_ma5_deviation": "+8.2%",
+                "intraday_trend": "破上轨2下轨2",
+                "cost_change": "+3.3%"
+            }
+        },
+        "159547": {
+            "timestamp": 1760523989.074035,
+            "data": {
+                "day_trend": "+3.1%",
+                "week_trend": "2连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+1.7%",
+                "next_day_limit_up_ma5_deviation": "+8.5%",
+                "intraday_trend": "破上轨0下轨2",
+                "cost_change": "+0.2%"
+            }
+        },
+        "159933": {
+            "timestamp": 1760523989.609256,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "3连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+1.8%",
+                "next_day_limit_up_ma5_deviation": "+8.7%",
+                "intraday_trend": "破上轨2下轨0",
+                "cost_change": "+6.1%"
+            }
+        },
+        "159336": {
+            "timestamp": 1760523992.036142,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "3连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+0.4%",
+                "next_day_limit_up_ma5_deviation": "+7.6%",
+                "intraday_trend": "破上轨0下轨1",
+                "cost_change": "+13.2%"
+            }
+        },
+        "159931": {
+            "timestamp": 1760523992.297858,
+            "data": {
+                "day_trend": "+2.5%",
+                "week_trend": "3连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+1.3%",
+                "next_day_limit_up_ma5_deviation": "+8.3%",
+                "intraday_trend": "破上轨5下轨0",
+                "cost_change": "+1.0%"
+            }
+        },
+        "159672": {
+            "timestamp": 1760523992.375193,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "3连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+0.6%",
+                "next_day_limit_up_ma5_deviation": "+7.9%",
+                "intraday_trend": "破上轨1下轨0",
+                "cost_change": "+0.4%"
+            }
+        },
+        "159692": {
+            "timestamp": 1760523993.8558452,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "上2连阳",
+                "month_trend": "+27.4%",
+                "ma5_deviation": "+0.1%",
+                "next_day_limit_up_ma5_deviation": "+7.6%",
+                "intraday_trend": "破上轨4下轨0",
+                "cost_change": "+0.7%"
+            }
+        },
+        "159512": {
+            "timestamp": 1760523994.154648,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "上1连阳",
+                "month_trend": "+12.9%",
+                "ma5_deviation": "+0.3%",
+                "next_day_limit_up_ma5_deviation": "+7.9%",
+                "intraday_trend": "破上轨1下轨0",
+                "cost_change": "+0.3%"
+            }
+        },
+        "159719": {
+            "timestamp": 1760523994.2,
+            "data": {
+                "day_trend": "上1连阳",
+                "week_trend": "上1连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+0.1%",
+                "next_day_limit_up_ma5_deviation": "+7.5%",
+                "intraday_trend": "破上轨2下轨0",
+                "cost_change": "+0.3%"
+            }
+        },
+        "159391": {
+            "timestamp": 1760523995.648267,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "1连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+1.6%",
+                "next_day_limit_up_ma5_deviation": "+8.6%",
+                "intraday_trend": "破上轨0下轨0",
+                "cost_change": "+7.4%"
+            }
+        },
+        "159940": {
+            "timestamp": 1760523995.693266,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "3连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+1.5%",
+                "next_day_limit_up_ma5_deviation": "+8.5%",
+                "intraday_trend": "破上轨3下轨0",
+                "cost_change": "-0.2%"
+            }
+        },
+        "159635": {
+            "timestamp": 1760523996.18191,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "3连阳",
+                "month_trend": "+5.8%",
+                "ma5_deviation": "+1.1%",
+                "next_day_limit_up_ma5_deviation": "+8.3%",
+                "intraday_trend": "破上轨0下轨0",
+                "cost_change": "+4.6%"
+            }
+        },
+        "159659": {
+            "timestamp": 1760523997.254441,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "+7.7%",
+                "month_trend": "2连阳",
+                "ma5_deviation": "-0.5%",
+                "next_day_limit_up_ma5_deviation": "+7.2%",
+                "intraday_trend": "破上轨0下轨0",
+                "cost_change": "+2.4%"
+            }
+        },
+        "159848": {
+            "timestamp": 1760523999.8401248,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "上2连阳",
+                "month_trend": "+27.4%",
+                "ma5_deviation": "+0.1%",
+                "next_day_limit_up_ma5_deviation": "+7.6%",
+                "intraday_trend": "破上轨4下轨0",
+                "cost_change": "+0.3%"
+            }
+        },
+        "159662": {
+            "timestamp": 1760523999.863353,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "3连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+0.6%",
+                "next_day_limit_up_ma5_deviation": "+7.9%",
+                "intraday_trend": "破上轨4下轨0",
+                "cost_change": "+1.2%"
+            }
+        },
+        "159666": {
+            "timestamp": 1760523999.905781,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "3连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+0.8%",
+                "next_day_limit_up_ma5_deviation": "+8.0%",
+                "intraday_trend": "破上轨3下轨0",
+                "cost_change": "+0.3%"
+            }
+        },
+        "159887": {
+            "timestamp": 1760524001.710334,
+            "data": {
+                "day_trend": "+4.2%",
+                "week_trend": "2连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+2.2%",
+                "next_day_limit_up_ma5_deviation": "+8.9%",
+                "intraday_trend": "破上轨2下轨1",
+                "cost_change": "+2.9%"
+            }
+        },
+        "159865": {
+            "timestamp": 1760524001.9075599,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "上2连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+0.2%",
+                "next_day_limit_up_ma5_deviation": "+7.6%",
+                "intraday_trend": "破上轨4下轨0",
+                "cost_change": "+2.0%"
+            }
+        },
+        "159825": {
+            "timestamp": 1760524002.444065,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "上2连阳",
+                "month_trend": "-4.5%",
+                "ma5_deviation": "+0.2%",
+                "next_day_limit_up_ma5_deviation": "+7.5%",
+                "intraday_trend": "破上轨3下轨0",
+                "cost_change": "+1.7%"
+            }
+        },
+        "159296": {
+            "timestamp": 1760524003.004458,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "2连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+1.0%",
+                "next_day_limit_up_ma5_deviation": "+8.1%",
+                "intraday_trend": "破上轨2下轨2",
+                "cost_change": "+1.1%"
+            }
+        },
+        "159301": {
+            "timestamp": 1760524003.554666,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "3连阳",
+                "month_trend": "+6.1%",
+                "ma5_deviation": "+0.3%",
+                "next_day_limit_up_ma5_deviation": "+7.6%",
+                "intraday_trend": "破上轨2下轨0",
+                "cost_change": "+1.9%"
+            }
+        },
+        "159553": {
+            "timestamp": 1760524004.200736,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "上2连阳",
+                "month_trend": "+25.1%",
+                "ma5_deviation": "+0.4%",
+                "next_day_limit_up_ma5_deviation": "+7.8%",
+                "intraday_trend": "破上轨3下轨0",
+                "cost_change": "+0.5%"
+            }
+        },
+        "159331": {
+            "timestamp": 1760524004.473236,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "3连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+1.2%",
+                "next_day_limit_up_ma5_deviation": "+8.4%",
+                "intraday_trend": "破上轨1下轨0",
+                "cost_change": "-0.2%"
+            }
+        },
+        "159731": {
+            "timestamp": 1760524007.042686,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "上2连阳",
+                "month_trend": "+16.1%",
+                "ma5_deviation": "-1.6%",
+                "next_day_limit_up_ma5_deviation": "+6.5%",
+                "intraday_trend": "破上轨0下轨0",
+                "cost_change": "+1.2%"
+            }
+        },
+        "159689": {
+            "timestamp": 1760524007.074316,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "1连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+0.6%",
+                "next_day_limit_up_ma5_deviation": "+7.9%",
+                "intraday_trend": "破上轨4下轨0",
+                "cost_change": "+0.8%"
+            }
+        },
+        "159611": {
+            "timestamp": 1760524007.3278248,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "3连阳",
+                "month_trend": "+7.9%",
+                "ma5_deviation": "+0.5%",
+                "next_day_limit_up_ma5_deviation": "+7.8%",
+                "intraday_trend": "破上轨3下轨0",
+                "cost_change": "+3.3%"
+            }
+        },
+        "159232": {
+            "timestamp": 1760524008.858909,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "3连阳",
+                "month_trend": "+13.9%",
+                "ma5_deviation": "+0.5%",
+                "next_day_limit_up_ma5_deviation": "+7.9%",
+                "intraday_trend": "破上轨1下轨0",
+                "cost_change": "+3.3%"
+            }
+        },
+        "159841": {
+            "timestamp": 1760524008.979611,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "上2连阳",
+                "month_trend": "+28.2%",
+                "ma5_deviation": "+0.1%",
+                "next_day_limit_up_ma5_deviation": "+7.6%",
+                "intraday_trend": "破上轨2下轨0",
+                "cost_change": "+0.4%"
+            }
+        },
+        "159842": {
+            "timestamp": 1760524009.5224488,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "上2连阳",
+                "month_trend": "+28.4%",
+                "ma5_deviation": "+0.1%",
+                "next_day_limit_up_ma5_deviation": "+7.7%",
+                "intraday_trend": "破上轨2下轨0",
+                "cost_change": "+0.4%"
+            }
+        },
+        "159277": {
+            "timestamp": 1760524010.308762,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "3连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+1.3%",
+                "next_day_limit_up_ma5_deviation": "+8.4%",
+                "intraday_trend": "破上轨0下轨1",
+                "cost_change": "+0.6%"
+            }
+        },
+        "159726": {
+            "timestamp": 1760524010.908051,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "2连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+1.3%",
+                "next_day_limit_up_ma5_deviation": "+8.5%",
+                "intraday_trend": "破上轨2下轨0",
+                "cost_change": "+1.1%"
+            }
+        },
+        "159302": {
+            "timestamp": 1760524011.3498712,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "3连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+1.6%",
+                "next_day_limit_up_ma5_deviation": "+8.7%",
+                "intraday_trend": "破上轨0下轨0",
+                "cost_change": "+1.6%"
+            }
+        },
+        "159843": {
+            "timestamp": 1760524011.854208,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "1连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+1.1%",
+                "next_day_limit_up_ma5_deviation": "+8.3%",
+                "intraday_trend": "破上轨2下轨0",
+                "cost_change": "+1.4%"
+            }
+        },
+        "159707": {
+            "timestamp": 1760524014.601179,
+            "data": {
+                "day_trend": "上1连阳",
+                "week_trend": "+14.8%",
+                "month_trend": "+23.2%",
+                "ma5_deviation": "-0.3%",
+                "next_day_limit_up_ma5_deviation": "+7.3%",
+                "intraday_trend": "破上轨2下轨0",
+                "cost_change": "+0.3%"
+            }
+        },
+        "159669": {
+            "timestamp": 1760524014.903722,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "+4.6%",
+                "month_trend": "+7.8%",
+                "ma5_deviation": "+0.5%",
+                "next_day_limit_up_ma5_deviation": "+7.9%",
+                "intraday_trend": "破上轨1下轨0",
+                "cost_change": "+3.9%"
+            }
+        },
+        "159617": {
+            "timestamp": 1760524014.964719,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "上3连阳",
+                "month_trend": "+11.2%",
+                "ma5_deviation": "-0.1%",
+                "next_day_limit_up_ma5_deviation": "+7.5%",
+                "intraday_trend": "破上轨6下轨0",
+                "cost_change": "+2.5%"
+            }
+        },
+        "159928": {
+            "timestamp": 1760524016.481649,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "1连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+0.8%",
+                "next_day_limit_up_ma5_deviation": "+8.1%",
+                "intraday_trend": "破上轨3下轨0",
+                "cost_change": "+0.2%"
+            }
+        },
+        "159501": {
+            "timestamp": 1760524016.871829,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "+6.7%",
+                "month_trend": "2连阳",
+                "ma5_deviation": "-0.4%",
+                "next_day_limit_up_ma5_deviation": "+7.3%",
+                "intraday_trend": "破上轨0下轨4",
+                "cost_change": "+5.9%"
+            }
+        },
+        "159632": {
+            "timestamp": 1760524017.904337,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "+7.0%",
+                "month_trend": "2连阳",
+                "ma5_deviation": "-0.5%",
+                "next_day_limit_up_ma5_deviation": "+7.3%",
+                "intraday_trend": "破上轨1下轨0",
+                "cost_change": "+5.9%"
+            }
+        },
+        "159696": {
+            "timestamp": 1760524018.154912,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "+7.0%",
+                "month_trend": "2连阳",
+                "ma5_deviation": "-0.3%",
+                "next_day_limit_up_ma5_deviation": "+7.4%",
+                "intraday_trend": "破上轨2下轨0",
+                "cost_change": "+4.1%"
+            }
+        },
+        "159941": {
+            "timestamp": 1760524018.575989,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "+6.6%",
+                "month_trend": "2连阳",
+                "ma5_deviation": "+0.1%",
+                "next_day_limit_up_ma5_deviation": "+7.7%",
+                "intraday_trend": "破上轨1下轨0",
+                "cost_change": "+2.5%"
+            }
+        },
+        "159245": {
+            "timestamp": 1760524019.093538,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "1连阳",
+                "month_trend": "上1连阳",
+                "ma5_deviation": "+1.3%",
+                "next_day_limit_up_ma5_deviation": "+8.6%",
+                "intraday_trend": "破上轨4下轨0",
+                "cost_change": "-0.3%"
+            }
+        },
+        "159268": {
+            "timestamp": 1760524019.290668,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "1连阳",
+                "month_trend": "上1连阳",
+                "ma5_deviation": "+0.8%",
+                "next_day_limit_up_ma5_deviation": "+8.2%",
+                "intraday_trend": "破上轨4下轨0",
+                "cost_change": "+0.0%"
+            }
+        },
+        "159220": {
+            "timestamp": 1760524021.311069,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "3连阳",
+                "month_trend": "2连阳",
+                "ma5_deviation": "+0.6%",
+                "next_day_limit_up_ma5_deviation": "+7.9%",
+                "intraday_trend": "破上轨0下轨0",
+                "cost_change": "+2.1%"
+            }
+        },
+        "159263": {
+            "timestamp": 1760524021.3782458,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "3连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+1.0%",
+                "next_day_limit_up_ma5_deviation": "+8.3%",
+                "intraday_trend": "破上轨2下轨0",
+                "cost_change": "+2.0%"
+            }
+        },
+        "159625": {
+            "timestamp": 1760524021.923897,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "3连阳",
+                "month_trend": "+7.9%",
+                "ma5_deviation": "+0.5%",
+                "next_day_limit_up_ma5_deviation": "+7.8%",
+                "intraday_trend": "破上轨2下轨0",
+                "cost_change": "+2.1%"
+            }
+        },
+        "159281": {
+            "timestamp": 1760524022.5067499,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "3连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+1.4%",
+                "next_day_limit_up_ma5_deviation": "+8.6%",
+                "intraday_trend": "破上轨0下轨0",
+                "cost_change": "+1.0%"
+            }
+        },
+        "159619": {
+            "timestamp": 1760524023.20336,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "3连阳",
+                "month_trend": "+5.6%",
+                "ma5_deviation": "+1.3%",
+                "next_day_limit_up_ma5_deviation": "+8.5%",
+                "intraday_trend": "破上轨1下轨1",
+                "cost_change": "+5.4%"
+            }
+        },
+        "159236": {
+            "timestamp": 1760524023.480463,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "3连阳",
+                "month_trend": "+13.6%",
+                "ma5_deviation": "+0.6%",
+                "next_day_limit_up_ma5_deviation": "+8.0%",
+                "intraday_trend": "破上轨0下轨0",
+                "cost_change": "+2.5%"
+            }
+        },
+        "159229": {
+            "timestamp": 1760524024.041934,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "3连阳",
+                "month_trend": "+8.5%",
+                "ma5_deviation": "+0.5%",
+                "next_day_limit_up_ma5_deviation": "+7.9%",
+                "intraday_trend": "破上轨0下轨0",
+                "cost_change": "+1.7%"
+            }
+        },
+        "159235": {
+            "timestamp": 1760524024.57711,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "3连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+0.6%",
+                "next_day_limit_up_ma5_deviation": "+7.9%",
+                "intraday_trend": "破上轨0下轨0",
+                "cost_change": "+2.6%"
+            }
+        },
+        "159001": {
+            "timestamp": 1760524025.0747101,
+            "data": {
+                "day_trend": "上1连阳",
+                "week_trend": "上1连阳",
+                "month_trend": "上1连阳",
+                "ma5_deviation": "-0.0%",
+                "next_day_limit_up_ma5_deviation": "+7.5%",
+                "intraday_trend": "破上轨0下轨2",
+                "cost_change": "-0.0%"
+            }
+        },
+        "159766": {
+            "timestamp": 1760524025.5133178,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "1连阳",
+                "month_trend": "+8.2%",
+                "ma5_deviation": "+1.2%",
+                "next_day_limit_up_ma5_deviation": "+8.5%",
+                "intraday_trend": "破上轨3下轨0",
+                "cost_change": "+0.1%"
+            }
+        },
+        "159569": {
+            "timestamp": 1760524028.090729,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "2连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+1.1%",
+                "next_day_limit_up_ma5_deviation": "+8.3%",
+                "intraday_trend": "破上轨3下轨0",
+                "cost_change": "+0.8%"
+            }
+        },
+        "159577": {
+            "timestamp": 1760524028.111105,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "+5.4%",
+                "month_trend": "上1连阳",
+                "ma5_deviation": "-0.5%",
+                "next_day_limit_up_ma5_deviation": "+7.3%",
+                "intraday_trend": "破上轨4下轨0",
+                "cost_change": "+0.9%"
+            }
+        },
+        "159003": {
+            "timestamp": 1760524028.204073,
+            "data": {
+                "day_trend": "上2连阳",
+                "week_trend": "上1连阳",
+                "month_trend": "上1连阳",
+                "ma5_deviation": "-0.0%",
+                "next_day_limit_up_ma5_deviation": "+7.5%",
+                "intraday_trend": "破上轨0下轨2",
+                "cost_change": "-0.0%"
+            }
+        },
+        "159005": {
+            "timestamp": 1760524029.815253,
+            "data": {
+                "day_trend": "上2连阳",
+                "week_trend": "上2连阳",
+                "month_trend": "上1连阳",
+                "ma5_deviation": "+0.0%",
+                "next_day_limit_up_ma5_deviation": "+7.5%",
+                "intraday_trend": "破上轨1下轨0",
+                "cost_change": "+0.0%"
+            }
+        },
+        "159862": {
+            "timestamp": 1760524029.9666429,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "1连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+1.0%",
+                "next_day_limit_up_ma5_deviation": "+8.3%",
+                "intraday_trend": "破上轨1下轨0",
+                "cost_change": "+1.0%"
+            }
+        },
+        "159513": {
+            "timestamp": 1760524030.0146601,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "+6.5%",
+                "month_trend": "上1连阳",
+                "ma5_deviation": "-0.5%",
+                "next_day_limit_up_ma5_deviation": "+7.3%",
+                "intraday_trend": "破上轨0下轨0",
+                "cost_change": "+6.8%"
+            }
+        },
+        "159233": {
+            "timestamp": 1760524031.320301,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "3连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+1.0%",
+                "next_day_limit_up_ma5_deviation": "+8.4%",
+                "intraday_trend": "破上轨1下轨0",
+                "cost_change": "+2.7%"
+            }
+        },
+        "159266": {
+            "timestamp": 1760524031.393489,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "3连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+1.3%",
+                "next_day_limit_up_ma5_deviation": "+8.5%",
+                "intraday_trend": "破上轨0下轨0",
+                "cost_change": "-2.0%"
+            }
+        },
+        "159660": {
+            "timestamp": 1760524031.88351,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "+8.0%",
+                "month_trend": "上1连阳",
+                "ma5_deviation": "-0.4%",
+                "next_day_limit_up_ma5_deviation": "+7.3%",
+                "intraday_trend": "破上轨0下轨0",
+                "cost_change": "+5.6%"
+            }
+        },
+        "159333": {
+            "timestamp": 1760524032.84023,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "3连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+1.4%",
+                "next_day_limit_up_ma5_deviation": "+8.6%",
+                "intraday_trend": "破上轨1下轨0",
+                "cost_change": "+1.0%"
+            }
+        },
+        "159225": {
+            "timestamp": 1760524036.759951,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "3连阳",
+                "month_trend": "+9.9%",
+                "ma5_deviation": "error",
+                "next_day_limit_up_ma5_deviation": "error",
+                "intraday_trend": "破上轨4下轨0",
+                "cost_change": "-"
+            }
+        },
+        "159222": {
+            "timestamp": 1760524050.447238,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "上2连阳",
+                "month_trend": "+9.8%",
+                "ma5_deviation": "error",
+                "next_day_limit_up_ma5_deviation": "error",
+                "intraday_trend": "破上轨0下轨0",
+                "cost_change": "-"
+            }
+        },
+        "600629": {
+            "timestamp": 1760701998.6582341,
+            "data": {
+                "day_trend": "+22.5%",
+                "week_trend": "+16.3%",
+                "month_trend": "-55.0%",
+                "ma5_deviation": "+12.5%",
+                "next_day_limit_up_ma5_deviation": "+14.8%",
+                "intraday_trend": "破上轨2下轨2",
+                "cost_change": "+38.1%"
+            }
+        },
+        "603389": {
+            "timestamp": 1760701998.7039769,
+            "data": {
+                "day_trend": "+23.9%",
+                "week_trend": "1连阳",
+                "month_trend": "-1.9%",
+                "ma5_deviation": "+1.6%",
+                "next_day_limit_up_ma5_deviation": "+7.2%",
+                "intraday_trend": "破上轨0下轨0",
+                "cost_change": "+80.8%"
+            }
+        },
+        "000006": {
+            "timestamp": 1760701999.012862,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "-29.0%",
+                "month_trend": "3连阳",
+                "ma5_deviation": "-2.9%",
+                "next_day_limit_up_ma5_deviation": "+5.9%",
+                "intraday_trend": "破上轨2下轨2",
+                "cost_change": "+16.5%"
+            }
+        },
+        "000001": {
+            "timestamp": 1760702001.170526,
+            "data": {
+                "day_trend": "上3连阳",
+                "week_trend": "2连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+0.3%",
+                "next_day_limit_up_ma5_deviation": "+7.3%",
+                "intraday_trend": "破上轨2下轨0",
+                "cost_change": "-"
+            }
+        },
+        "605099": {
+            "timestamp": 1760702002.18448,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "3连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+3.2%",
+                "next_day_limit_up_ma5_deviation": "+9.9%",
+                "intraday_trend": "破上轨3下轨0",
+                "cost_change": "-5.1%"
+            }
+        },
+        "002289": {
+            "timestamp": 1760702002.6902158,
+            "data": {
+                "day_trend": "+18.5%",
+                "week_trend": "1连阳",
+                "month_trend": "-61.7%",
+                "ma5_deviation": "+1.5%",
+                "next_day_limit_up_ma5_deviation": "+7.4%",
+                "intraday_trend": "破上轨3下轨0",
+                "cost_change": "+102.7%"
+            }
+        },
+        "159813": {
+            "timestamp": 1760702004.453714,
+            "data": {
+                "day_trend": "上1连阳",
+                "week_trend": "+31.8%",
+                "month_trend": "+49.4%",
+                "ma5_deviation": "-3.7%",
+                "next_day_limit_up_ma5_deviation": "+5.3%",
+                "intraday_trend": "破上轨0下轨0",
+                "cost_change": "-4.4%"
+            }
+        },
+        "159732": {
+            "timestamp": 1760702005.052733,
+            "data": {
+                "day_trend": "上1连阳",
+                "week_trend": "+26.4%",
+                "month_trend": "+47.1%",
+                "ma5_deviation": "-3.4%",
+                "next_day_limit_up_ma5_deviation": "+5.0%",
+                "intraday_trend": "破上轨0下轨0",
+                "cost_change": "-5.1%"
+            }
+        },
+        "603305": {
+            "timestamp": 1760702005.467773,
+            "data": {
+                "day_trend": "上1连阳",
+                "week_trend": "+55.2%",
+                "month_trend": "+57.2%",
+                "ma5_deviation": "-6.4%",
+                "next_day_limit_up_ma5_deviation": "+2.8%",
+                "intraday_trend": "破上轨0下轨1",
+                "cost_change": "-11.1%"
+            }
+        },
+        "603838": {
+            "timestamp": 1760702009.852494,
+            "data": {
+                "day_trend": "上1连阳",
+                "week_trend": "+33.3%",
+                "month_trend": "上2连阳",
+                "ma5_deviation": "-4.5%",
+                "next_day_limit_up_ma5_deviation": "+4.0%",
+                "intraday_trend": "破上轨0下轨5",
+                "cost_change": "+18.3%"
+            }
+        },
+        "000021": {
+            "timestamp": 1760702009.897237,
+            "data": {
+                "day_trend": "上2连阳",
+                "week_trend": "+50.5%",
+                "month_trend": "上2连阳",
+                "ma5_deviation": "-7.2%",
+                "next_day_limit_up_ma5_deviation": "+2.6%",
+                "intraday_trend": "破上轨0下轨1",
+                "cost_change": "-6.6%"
+            }
+        },
+        "600892": {
+            "timestamp": 1760702010.038274,
+            "data": {
+                "day_trend": "上2连阳",
+                "week_trend": "上3连阳",
+                "month_trend": "上2连阳",
+                "ma5_deviation": "-3.4%",
+                "next_day_limit_up_ma5_deviation": "+5.5%",
+                "intraday_trend": "破上轨0下轨0",
+                "cost_change": "+12.6%"
+            }
+        },
+        "159768": {
+            "timestamp": 1760702012.817727,
+            "data": {
+                "day_trend": "上1连阳",
+                "week_trend": "+17.7%",
+                "month_trend": "+26.7%",
+                "ma5_deviation": "-1.6%",
+                "next_day_limit_up_ma5_deviation": "+6.2%",
+                "intraday_trend": "破上轨2下轨3",
+                "cost_change": "-2.4%"
+            }
+        },
+        "000045": {
+            "timestamp": 1760702013.55113,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "+4.6%",
+                "month_trend": "3连阳",
+                "ma5_deviation": "-5.1%",
+                "next_day_limit_up_ma5_deviation": "+3.3%",
+                "intraday_trend": "破上轨2下轨0",
+                "cost_change": "+4.8%"
+            }
+        },
+        "000014": {
+            "timestamp": 1760702013.563622,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "+6.0%",
+                "month_trend": "+50.7%",
+                "ma5_deviation": "+9.8%",
+                "next_day_limit_up_ma5_deviation": "+14.7%",
+                "intraday_trend": "破上轨6下轨0",
+                "cost_change": "+17.3%"
+            }
+        },
+        "002549": {
+            "timestamp": 1760702016.259556,
+            "data": {
+                "day_trend": "上3连阳",
+                "week_trend": "上1连阳",
+                "month_trend": "-5.2%",
+                "ma5_deviation": "-7.0%",
+                "next_day_limit_up_ma5_deviation": "+2.0%",
+                "intraday_trend": "破上轨3下轨0",
+                "cost_change": "-5.9%"
+            }
+        },
+        "002338": {
+            "timestamp": 1760702016.409865,
+            "data": {
+                "day_trend": "上3连阳",
+                "week_trend": "上2连阳",
+                "month_trend": "+22.6%",
+                "ma5_deviation": "-9.7%",
+                "next_day_limit_up_ma5_deviation": "-0.0%",
+                "intraday_trend": "破上轨0下轨2",
+                "cost_change": "-3.1%"
+            }
+        },
+        "002364": {
+            "timestamp": 1760702336.978168,
+            "data": {
+                "day_trend": "+30.5%",
+                "week_trend": "1连阳",
+                "month_trend": "+48.9%",
+                "ma5_deviation": "-5.0%",
+                "next_day_limit_up_ma5_deviation": "+2.4%",
+                "intraday_trend": "破上轨0下轨0",
+                "cost_change": "-6.7%"
+            }
+        },
+        "002298": {
+            "timestamp": 1760702337.106804,
+            "data": {
+                "day_trend": "上1连阳",
+                "week_trend": "上3连阳",
+                "month_trend": "+62.7%",
+                "ma5_deviation": "-9.4%",
+                "next_day_limit_up_ma5_deviation": "-0.6%",
+                "intraday_trend": "破上轨0下轨1",
+                "cost_change": "-10.9%"
+            }
+        },
+        "000063": {
+            "timestamp": 1760702337.658141,
+            "data": {
+                "day_trend": "上2连阳",
+                "week_trend": "上3连阳",
+                "month_trend": "+25.6%",
+                "ma5_deviation": "-5.4%",
+                "next_day_limit_up_ma5_deviation": "+3.8%",
+                "intraday_trend": "破上轨0下轨0",
+                "cost_change": "+3.7%"
+            }
+        },
+        "002837": {
+            "timestamp": 1760702339.783594,
+            "data": {
+                "day_trend": "上1连阳",
+                "week_trend": "上2连阳",
+                "month_trend": "+97.8%",
+                "ma5_deviation": "-8.3%",
+                "next_day_limit_up_ma5_deviation": "+1.3%",
+                "intraday_trend": "破上轨0下轨0",
+                "cost_change": "-11.2%"
+            }
+        },
+        "600173": {
+            "timestamp": 1760702339.939348,
+            "data": {
+                "day_trend": "上1连阳",
+                "week_trend": "上3连阳",
+                "month_trend": "2连阳",
+                "ma5_deviation": "-5.7%",
+                "next_day_limit_up_ma5_deviation": "+1.8%",
+                "intraday_trend": "破上轨0下轨2",
+                "cost_change": "-4.3%"
+            }
+        },
+        "600501": {
+            "timestamp": 1760702340.583694,
+            "data": {
+                "day_trend": "上1连阳",
+                "week_trend": "上2连阳",
+                "month_trend": "+36.0%",
+                "ma5_deviation": "-8.9%",
+                "next_day_limit_up_ma5_deviation": "+0.8%",
+                "intraday_trend": "破上轨0下轨0",
+                "cost_change": "-8.3%"
+            }
+        },
+        "603186": {
+            "timestamp": 1760702342.7138062,
+            "data": {
+                "day_trend": "上3连阳",
+                "week_trend": "1连阳",
+                "month_trend": "+50.9%",
+                "ma5_deviation": "-6.6%",
+                "next_day_limit_up_ma5_deviation": "+1.3%",
+                "intraday_trend": "破上轨0下轨0",
+                "cost_change": "-3.1%"
+            }
+        },
+        "603308": {
+            "timestamp": 1760702343.092175,
+            "data": {
+                "day_trend": "上2连阳",
+                "week_trend": "2连阳",
+                "month_trend": "-18.1%",
+                "ma5_deviation": "-3.1%",
+                "next_day_limit_up_ma5_deviation": "+4.6%",
+                "intraday_trend": "破上轨0下轨1",
+                "cost_change": "+13.5%"
+            }
+        },
+        "603863": {
+            "timestamp": 1760702343.43225,
+            "data": {
+                "day_trend": "上3连阳",
+                "week_trend": "上1连阳",
+                "month_trend": "+64.4%",
+                "ma5_deviation": "-12.9%",
+                "next_day_limit_up_ma5_deviation": "-3.1%",
+                "intraday_trend": "破上轨0下轨2",
+                "cost_change": "-13.3%"
+            }
+        },
+        "002169": {
+            "timestamp": 1760702347.800425,
+            "data": {
+                "day_trend": "+15.9%",
+                "week_trend": "上1连阳",
+                "month_trend": "上2连阳",
+                "ma5_deviation": "-2.5%",
+                "next_day_limit_up_ma5_deviation": "+4.9%",
+                "intraday_trend": "破上轨0下轨0",
+                "cost_change": "+2.4%"
+            }
+        },
+        "002370": {
+            "timestamp": 1760702347.845074,
+            "data": {
+                "day_trend": "+19.5%",
+                "week_trend": "1连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+13.7%",
+                "next_day_limit_up_ma5_deviation": "+15.0%",
+                "intraday_trend": "破上轨2下轨4",
+                "cost_change": "+13.0%"
+            }
+        },
+        "000572": {
+            "timestamp": 1760702348.432159,
+            "data": {
+                "day_trend": "上3连阳",
+                "week_trend": "1连阳",
+                "month_trend": "3连阳",
+                "ma5_deviation": "+7.0%",
+                "next_day_limit_up_ma5_deviation": "+10.5%",
+                "intraday_trend": "破上轨4下轨0",
+                "cost_change": "+14.8%"
+            }
+        },
+        "002942": {
+            "timestamp": 1760702350.833262,
+            "data": {
+                "day_trend": "+41.8%",
+                "week_trend": "3连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+2.6%",
+                "next_day_limit_up_ma5_deviation": "+6.6%",
+                "intraday_trend": "破上轨0下轨1",
+                "cost_change": "+22.0%"
+            }
+        },
+        "002571": {
+            "timestamp": 1760702351.427114,
+            "data": {
+                "day_trend": "+28.4%",
+                "week_trend": "2连阳",
+                "month_trend": "3连阳",
+                "ma5_deviation": "+11.9%",
+                "next_day_limit_up_ma5_deviation": "+14.6%",
+                "intraday_trend": "破上轨2下轨0",
+                "cost_change": "+22.2%"
+            }
+        },
+        "600078": {
+            "timestamp": 1760702351.9033191,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "+36.7%",
+                "month_trend": "-23.3%",
+                "ma5_deviation": "+8.0%",
+                "next_day_limit_up_ma5_deviation": "+13.0%",
+                "intraday_trend": "破上轨1下轨2",
+                "cost_change": "+16.7%"
+            }
+        },
+        "605188": {
+            "timestamp": 1760702353.7293088,
+            "data": {
+                "day_trend": "+37.7%",
+                "week_trend": "1连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "-1.7%",
+                "next_day_limit_up_ma5_deviation": "+3.8%",
+                "intraday_trend": "破上轨2下轨0",
+                "cost_change": "+2.1%"
+            }
+        },
+        "000592": {
+            "timestamp": 1760702354.708859,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "+1.1%",
+                "month_trend": "3连阳",
+                "ma5_deviation": "+4.2%",
+                "next_day_limit_up_ma5_deviation": "+11.4%",
+                "intraday_trend": "破上轨1下轨0",
+                "cost_change": "+6.0%"
+            }
+        },
+        "002017": {
+            "timestamp": 1760702354.82462,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "1连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+6.3%",
+                "next_day_limit_up_ma5_deviation": "+11.2%",
+                "intraday_trend": "破上轨0下轨0",
+                "cost_change": "+3.2%"
+            }
+        },
+        "002185": {
+            "timestamp": 1760702356.44838,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "+15.7%",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+10.4%",
+                "next_day_limit_up_ma5_deviation": "+15.1%",
+                "intraday_trend": "破上轨0下轨0",
+                "cost_change": "+15.8%"
+            }
+        },
+        "002208": {
+            "timestamp": 1760702360.521312,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "+48.0%",
+                "month_trend": "2连阳",
+                "ma5_deviation": "+14.3%",
+                "next_day_limit_up_ma5_deviation": "+16.8%",
+                "intraday_trend": "破上轨2下轨1",
+                "cost_change": "+19.1%"
+            }
+        },
+        "002320": {
+            "timestamp": 1760702361.126205,
+            "data": {
+                "day_trend": "-7.1%",
+                "week_trend": "3连阳",
+                "month_trend": "+3.7%",
+                "ma5_deviation": "+14.7%",
+                "next_day_limit_up_ma5_deviation": "+17.6%",
+                "intraday_trend": "破上轨2下轨0",
+                "cost_change": "+60.6%"
+            }
+        },
+        "603101": {
+            "timestamp": 1760702361.196696,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "1连阳",
+                "month_trend": "+36.6%",
+                "ma5_deviation": "+7.0%",
+                "next_day_limit_up_ma5_deviation": "+12.4%",
+                "intraday_trend": "破上轨1下轨0",
+                "cost_change": "+6.6%"
+            }
+        },
+        "603313": {
+            "timestamp": 1760702363.700628,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "1连阳",
+                "month_trend": "3连阳",
+                "ma5_deviation": "+7.9%",
+                "next_day_limit_up_ma5_deviation": "+13.7%",
+                "intraday_trend": "破上轨1下轨0",
+                "cost_change": "+8.0%"
+            }
+        },
+        "603367": {
+            "timestamp": 1760702363.9226859,
+            "data": {
+                "day_trend": "3连阳",
+                "week_trend": "1连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+10.3%",
+                "next_day_limit_up_ma5_deviation": "+15.1%",
+                "intraday_trend": "破上轨0下轨0",
+                "cost_change": "+7.5%"
+            }
+        },
+        "603933": {
+            "timestamp": 1760702364.534635,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "1连阳",
+                "month_trend": "3连阳",
+                "ma5_deviation": "+13.0%",
+                "next_day_limit_up_ma5_deviation": "+17.3%",
+                "intraday_trend": "破上轨1下轨0",
+                "cost_change": "+18.3%"
+            }
+        },
+        "605303": {
+            "timestamp": 1760702366.65081,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "2连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+6.8%",
+                "next_day_limit_up_ma5_deviation": "+12.3%",
+                "intraday_trend": "破上轨1下轨2",
+                "cost_change": "+8.5%"
+            }
+        },
+        "000626": {
+            "timestamp": 1760702366.761048,
+            "data": {
+                "day_trend": "+31.7%",
+                "week_trend": "3连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+20.0%",
+                "next_day_limit_up_ma5_deviation": "+19.5%",
+                "intraday_trend": "破上轨1下轨0",
+                "cost_change": "+37.3%"
+            }
+        },
+        "002825": {
+            "timestamp": 1760702367.423677,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "2连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+13.3%",
+                "next_day_limit_up_ma5_deviation": "+17.4%",
+                "intraday_trend": "破上轨2下轨0",
+                "cost_change": "+22.9%"
+            }
+        },
+        "002940": {
+            "timestamp": 1760702369.6170502,
+            "data": {
+                "day_trend": "3连阳",
+                "week_trend": "1连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+8.9%",
+                "next_day_limit_up_ma5_deviation": "+13.4%",
+                "intraday_trend": "破上轨1下轨1",
+                "cost_change": "+4.4%"
+            }
+        },
+        "600408": {
+            "timestamp": 1760702373.8858528,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "3连阳",
+                "month_trend": "2连阳",
+                "ma5_deviation": "+14.1%",
+                "next_day_limit_up_ma5_deviation": "+17.4%",
+                "intraday_trend": "破上轨1下轨2",
+                "cost_change": "+24.8%"
+            }
+        },
+        "600403": {
+            "timestamp": 1760702373.937072,
+            "data": {
+                "day_trend": "+6.5%",
+                "week_trend": "2连阳",
+                "month_trend": "2连阳",
+                "ma5_deviation": "+20.0%",
+                "next_day_limit_up_ma5_deviation": "+19.5%",
+                "intraday_trend": "破上轨1下轨0",
+                "cost_change": "+65.8%"
+            }
+        },
+        "600748": {
+            "timestamp": 1760702374.441785,
+            "data": {
+                "day_trend": "3连阳",
+                "week_trend": "1连阳",
+                "month_trend": "+50.2%",
+                "ma5_deviation": "+16.2%",
+                "next_day_limit_up_ma5_deviation": "+18.4%",
+                "intraday_trend": "破上轨1下轨4",
+                "cost_change": "+47.4%"
+            }
+        },
+        "601126": {
+            "timestamp": 1760702377.235797,
+            "data": {
+                "day_trend": "上2连阳",
+                "week_trend": "-14.0%",
+                "month_trend": "-8.9%",
+                "ma5_deviation": "+8.3%",
+                "next_day_limit_up_ma5_deviation": "+12.8%",
+                "intraday_trend": "破上轨2下轨2",
+                "cost_change": "+27.4%"
+            }
+        },
+        "601212": {
+            "timestamp": 1760702377.34289,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "+42.6%",
+                "month_trend": "-33.8%",
+                "ma5_deviation": "+12.6%",
+                "next_day_limit_up_ma5_deviation": "+17.0%",
+                "intraday_trend": "破上轨3下轨0",
+                "cost_change": "+56.2%"
+            }
+        },
+        "603162": {
+            "timestamp": 1760702377.951333,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "3连阳",
+                "month_trend": "-14.2%",
+                "ma5_deviation": "+12.1%",
+                "next_day_limit_up_ma5_deviation": "+16.7%",
+                "intraday_trend": "破上轨1下轨0",
+                "cost_change": "+21.0%"
+            }
+        },
+        "603938": {
+            "timestamp": 1760702380.2346911,
+            "data": {
+                "day_trend": "3连阳",
+                "week_trend": "+29.5%",
+                "month_trend": "2连阳",
+                "ma5_deviation": "+17.8%",
+                "next_day_limit_up_ma5_deviation": "+19.5%",
+                "intraday_trend": "破上轨5下轨0",
+                "cost_change": "+29.7%"
+            }
+        },
+        "000638": {
+            "timestamp": 1760702380.296893,
+            "data": {
+                "day_trend": "+8.2%",
+                "week_trend": "1连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+7.6%",
+                "next_day_limit_up_ma5_deviation": "+11.8%",
+                "intraday_trend": "破上轨3下轨1",
+                "cost_change": "+5.9%"
+            }
+        },
+        "002047": {
+            "timestamp": 1760702381.180466,
+            "data": {
+                "day_trend": "3连阳",
+                "week_trend": "1连阳",
+                "month_trend": "+19.9%",
+                "ma5_deviation": "+6.2%",
+                "next_day_limit_up_ma5_deviation": "+12.3%",
+                "intraday_trend": "破上轨6下轨4",
+                "cost_change": "+6.6%"
+            }
+        },
+        "002305": {
+            "timestamp": 1760702383.060871,
+            "data": {
+                "day_trend": "+17.0%",
+                "week_trend": "2连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+10.1%",
+                "next_day_limit_up_ma5_deviation": "+13.7%",
+                "intraday_trend": "破上轨1下轨3",
+                "cost_change": "+6.9%"
+            }
+        },
+        "002592": {
+            "timestamp": 1760702386.982188,
+            "data": {
+                "day_trend": "3连阳",
+                "week_trend": "1连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+7.6%",
+                "next_day_limit_up_ma5_deviation": "+13.0%",
+                "intraday_trend": "破上轨1下轨3",
+                "cost_change": "+8.9%"
+            }
+        },
+        "600735": {
+            "timestamp": 1760702387.038851,
+            "data": {
+                "day_trend": "3连阳",
+                "week_trend": "1连阳",
+                "month_trend": "+119.6%",
+                "ma5_deviation": "+8.1%",
+                "next_day_limit_up_ma5_deviation": "+13.7%",
+                "intraday_trend": "破上轨1下轨0",
+                "cost_change": "-14.6%"
+            }
+        },
+        "603813": {
+            "timestamp": 1760702387.7762182,
+            "data": {
+                "day_trend": "+11.3%",
+                "week_trend": "3连阳",
+                "month_trend": "+50.7%",
+                "ma5_deviation": "+7.4%",
+                "next_day_limit_up_ma5_deviation": "+12.1%",
+                "intraday_trend": "破上轨2下轨2",
+                "cost_change": "+73.4%"
+            }
+        },
+        "002513": {
+            "timestamp": 1760702389.900457,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "1连阳",
+                "month_trend": "上1连阳",
+                "ma5_deviation": "+0.5%",
+                "next_day_limit_up_ma5_deviation": "+10.1%",
+                "intraday_trend": "破上轨4下轨0",
+                "cost_change": "+3.3%"
+            }
+        },
+        "001282": {
+            "timestamp": 1760702390.426893,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "2连阳",
+                "month_trend": "3连阳",
+                "ma5_deviation": "+4.8%",
+                "next_day_limit_up_ma5_deviation": "+10.8%",
+                "intraday_trend": "破上轨0下轨0",
+                "cost_change": "+7.4%"
+            }
+        },
+        "002560": {
+            "timestamp": 1760702390.789,
+            "data": {
+                "day_trend": "上2连阳",
+                "week_trend": "3连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+3.1%",
+                "next_day_limit_up_ma5_deviation": "+8.5%",
+                "intraday_trend": "破上轨3下轨1",
+                "cost_change": "+1.3%"
+            }
+        },
+        "002759": {
+            "timestamp": 1760702393.336617,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "+37.1%",
+                "month_trend": "3连阳",
+                "ma5_deviation": "+4.3%",
+                "next_day_limit_up_ma5_deviation": "+10.8%",
+                "intraday_trend": "破上轨1下轨0",
+                "cost_change": "+2.8%"
+            }
+        },
+        "601011": {
+            "timestamp": 1760702393.80262,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "3连阳",
+                "month_trend": "-19.5%",
+                "ma5_deviation": "+4.7%",
+                "next_day_limit_up_ma5_deviation": "+10.2%",
+                "intraday_trend": "破上轨2下轨1",
+                "cost_change": "+9.9%"
+            }
+        },
+        "601022": {
+            "timestamp": 1760702394.105794,
+            "data": {
+                "day_trend": "上1连阳",
+                "week_trend": "2连阳",
+                "month_trend": "3连阳",
+                "ma5_deviation": "+1.0%",
+                "next_day_limit_up_ma5_deviation": "+7.9%",
+                "intraday_trend": "破上轨1下轨0",
+                "cost_change": "+0.2%"
+            }
+        },
+        "603307": {
+            "timestamp": 1760702396.627656,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "2连阳",
+                "month_trend": "-7.5%",
+                "ma5_deviation": "+6.8%",
+                "next_day_limit_up_ma5_deviation": "+11.4%",
+                "intraday_trend": "破上轨3下轨0",
+                "cost_change": "+4.9%"
+            }
+        },
+        "920022": {
+            "timestamp": 1760702400.1170251,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "2连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+2.3%",
+                "next_day_limit_up_ma5_deviation": "+9.1%",
+                "intraday_trend": "破上轨1下轨2",
+                "cost_change": "-2.1%"
+            }
+        },
+        "920015": {
+            "timestamp": 1760702400.187052,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "上1连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "-5.0%",
+                "next_day_limit_up_ma5_deviation": "+4.6%",
+                "intraday_trend": "破上轨0下轨0",
+                "cost_change": "-3.9%"
+            }
+        },
+        "603778": {
+            "timestamp": 1760702400.6277702,
+            "data": {
+                "day_trend": "+0.9%",
+                "week_trend": "1连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+11.2%",
+                "next_day_limit_up_ma5_deviation": "+14.2%",
+                "intraday_trend": "破上轨4下轨0",
+                "cost_change": "+11.4%"
+            }
+        },
+        "920158": {
+            "timestamp": 1760702402.1313999,
+            "data": {
+                "day_trend": "2连阴",
+                "week_trend": "无连阳",
+                "month_trend": "无连阳",
+                "ma5_deviation": "error",
+                "next_day_limit_up_ma5_deviation": "error",
+                "intraday_trend": "破上轨0下轨4",
+                "cost_change": "-4.0%"
+            }
+        },
+        "920225": {
+            "timestamp": 1760702402.9997299,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "3连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+10.4%",
+                "next_day_limit_up_ma5_deviation": "+15.3%",
+                "intraday_trend": "破上轨3下轨1",
+                "cost_change": "+15.2%"
+            }
+        },
+        "920651": {
+            "timestamp": 1760702403.923083,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "2连阳",
+                "month_trend": "-5.6%",
+                "ma5_deviation": "+5.7%",
+                "next_day_limit_up_ma5_deviation": "+11.0%",
+                "intraday_trend": "破上轨3下轨2",
+                "cost_change": "+8.0%"
+            }
+        },
+        "300300": {
+            "timestamp": 1760702404.9544508,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "1连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+14.9%",
+                "next_day_limit_up_ma5_deviation": "+26.3%",
+                "intraday_trend": "破上轨1下轨0",
+                "cost_change": "+11.0%"
+            }
+        },
+        "300389": {
+            "timestamp": 1760702406.211102,
+            "data": {
+                "day_trend": "3连阳",
+                "week_trend": "1连阳",
+                "month_trend": "+4.6%",
+                "ma5_deviation": "+16.4%",
+                "next_day_limit_up_ma5_deviation": "+27.4%",
+                "intraday_trend": "破上轨3下轨0",
+                "cost_change": "+23.5%"
+            }
+        },
+        "301365": {
+            "timestamp": 1760702407.27379,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "1连阳",
+                "month_trend": "-14.3%",
+                "ma5_deviation": "+17.5%",
+                "next_day_limit_up_ma5_deviation": "+18.1%",
+                "intraday_trend": "破上轨6下轨0",
+                "cost_change": "+8.8%"
+            }
+        },
+        "301563": {
+            "timestamp": 1760702407.3301508,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "2连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+13.4%",
+                "next_day_limit_up_ma5_deviation": "+18.8%",
+                "intraday_trend": "破上轨2下轨2",
+                "cost_change": "+3.6%"
+            }
+        },
+        "301668": {
+            "timestamp": 1760702411.341857,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "上1连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "+2.9%",
+                "next_day_limit_up_ma5_deviation": "+10.3%",
+                "intraday_trend": "破上轨2下轨0",
+                "cost_change": "-0.8%"
+            }
+        },
+        "301584": {
+            "timestamp": 1760702411.411202,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "1连阳",
+                "month_trend": "2连阴",
+                "ma5_deviation": "+3.8%",
+                "next_day_limit_up_ma5_deviation": "+10.3%",
+                "intraday_trend": "破上轨1下轨0",
+                "cost_change": "+2.8%"
+            }
+        },
+        "301617": {
+            "timestamp": 1760702412.228014,
+            "data": {
+                "day_trend": "2连阳",
+                "week_trend": "2连阳",
+                "month_trend": "3连阳",
+                "ma5_deviation": "+17.9%",
+                "next_day_limit_up_ma5_deviation": "+21.2%",
+                "intraday_trend": "破上轨5下轨0",
+                "cost_change": "+14.1%"
+            }
+        },
+        "601026": {
+            "timestamp": 1760702413.490387,
+            "data": {
+                "day_trend": "无连阳",
+                "week_trend": "无连阳",
+                "month_trend": "无连阳",
+                "ma5_deviation": "error",
+                "next_day_limit_up_ma5_deviation": "error",
+                "intraday_trend": "破上轨0下轨0",
+                "cost_change": "-"
+            }
+        },
+        "688313": {
+            "timestamp": 1760702414.249084,
+            "data": {
+                "day_trend": "上2连阳",
+                "week_trend": "上1连阳",
+                "month_trend": "+152.9%",
+                "ma5_deviation": "-14.5%",
+                "next_day_limit_up_ma5_deviation": "error",
+                "intraday_trend": "-",
+                "cost_change": "-"
+            }
+        },
+        "002259": {
+            "timestamp": 1760703197.850841,
+            "data": {
+                "day_trend": "上1连阳",
+                "week_trend": "上2连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "-1.8%",
+                "next_day_limit_up_ma5_deviation": "+6.2%",
+                "intraday_trend": "破上轨1下轨2",
+                "cost_change": "-2.1%"
+            }
+        },
+        "000691": {
+            "timestamp": 1760703200.692024,
+            "data": {
+                "day_trend": "上1连阳",
+                "week_trend": "+71.5%",
+                "month_trend": "+83.4%",
+                "ma5_deviation": "-5.1%",
+                "next_day_limit_up_ma5_deviation": "+4.6%",
+                "intraday_trend": "破上轨0下轨1",
+                "cost_change": "+23.1%"
+            }
+        },
+        "002141": {
+            "timestamp": 1760703202.813515,
+            "data": {
+                "day_trend": "1连阳",
+                "week_trend": "上2连阳",
+                "month_trend": "1连阳",
+                "ma5_deviation": "-0.4%",
+                "next_day_limit_up_ma5_deviation": "+7.7%",
+                "intraday_trend": "破上轨3下轨2",
+                "cost_change": "-2.3%"
+            }
+        },
+        "002816": {
+            "timestamp": 1760703205.3829231,
+            "data": {
+                "day_trend": "+17.0%",
+                "week_trend": "3连阳",
+                "month_trend": "2连阳",
+                "ma5_deviation": "-3.0%",
+                "next_day_limit_up_ma5_deviation": "+4.6%",
+                "intraday_trend": "破上轨2下轨2",
+                "cost_change": "+16.5%"
+            }
+        }
+    }
+}

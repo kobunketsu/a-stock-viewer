@@ -1,0 +1,251 @@
+---
+description: A股ETF风险收益评估体系开发
+globs: 
+---
+#系统性优化方案
+
+##指标体系重构（引入三维因子体系）
+class EnhancedFactorFramework:
+    def __init__(self):
+        # 动态权重配置（可通过遗传算法优化）
+        self.factor_weights = {
+            # 核心趋势维度（40%）
+            'momentum': 0.20,      # 趋势动量
+            'adx': 0.10,           # 趋势强度
+            'hurst': 0.10,         # 趋势持续性
+            
+            # 量价结构维度（35%）
+            'volume_price': 0.15,  # 量价背离
+            'vwap_deviation': 0.10, # 价格与VWAP偏离
+            'liquidity': 0.10,      # 流动性因子
+            
+            # 风险控制维度（25%）
+            'volatility': 0.10,     # 波动率曲面
+            'beta': 0.08,           # 市场相关性
+            'drawdown': 0.07        # 动态回撤压力
+        }
+
+##自适应动量因子：
+def calculate_adaptive_momentum(data, lookback=5):
+    """
+    计算自适应动量得分
+    Args:
+        data: 包含收盘价的时间序列
+        lookback: 观察窗口
+    Returns:
+        动量得分 (0-1)
+    """
+    returns = data.pct_change().dropna()
+    # 计算Hurst指数
+    H = compute_hurst(returns)
+    # 计算EMA斜率
+    ema = data.ewm(span=lookback).mean()
+    slope = (ema[-1] - ema[-lookback]) / lookback
+    # 动量得分合成
+    return 0.6 * sigmoid(slope) + 0.4 * H
+
+##波动率曲面分析：
+def volatility_surface(data, window=5):
+    """
+    计算波动率曲面特征
+    Args:
+        data: 包含高、低、收盘价的数据
+        window: 计算窗口
+    Returns:
+        dict: 波动率特征
+    """
+    hl_range = (data['high'] - data['low']).rolling(window).mean()
+    oc_range = data['close'].pct_change().abs().rolling(window).mean()
+    vol_ratio = hl_range / oc_range
+    return {
+        'volatility_clustering': vol_ratio.mean(),
+        'vol_regime': 1 if vol_ratio[-1] > 1.2*vol_ratio.mean() else 0
+    }
+
+#趋势持续性增强模块
+
+##自适应趋势过滤器：
+def trend_filter(data, fast_period=3, slow_period=8):
+    """
+    双EMA趋势过滤
+    Returns:
+        1: 上升趋势
+        0: 震荡
+        -1: 下降趋势
+    """
+    ema_fast = data.ewm(span=fast_period).mean()
+    ema_slow = data.ewm(span=slow_period).mean()
+    cross = np.where(ema_fast > ema_slow, 1, -1)
+    return cross[-1]
+
+##换手率质量指标：
+def turnover_quality(turnover_series):
+    """
+    换手率质量评估
+    Returns:
+        质量得分 (0-1)
+    """
+    mad = np.median(np.abs(turnover_series - np.median(turnover_series)))
+    z_score = (turnover_series[-1] - np.median(turnover_series)) / mad
+    return 1 / (1 + np.exp(-z_score))
+
+#风险控制体系
+##动态回撤预警算法：
+class DrawdownMonitor:
+    def __init__(self, window=20):
+        self.window = window
+        self.peak = -np.inf
+        self.drawdown = 0.0
+        
+    def update(self, price):
+        self.peak = max(self.peak, price)
+        self.drawdown = (self.peak - price) / self.peak
+        return self.drawdown
+    
+    def get_alert_level(self):
+        if self.drawdown > 0.15:
+            return 3  # 严重警报
+        elif self.drawdown > 0.10:
+            return 2  # 中度警报
+        elif self.drawdown > 0.05:
+            return 1  # 轻度警报
+        else:
+            return 0
+
+##市场相关性压力测试：
+def market_beta_test(etf_returns, index_returns, window=20):
+    """
+    计算动态Beta及压力场景
+    Returns:
+        dict: 包含beta值及压力状态
+    """
+    cov = np.cov(etf_returns[-window:], index_returns[-window:])
+    beta = cov[0,1] / np.var(index_returns[-window:])
+    
+    # 压力场景判断
+    stress_scenario = 0
+    if beta > 1.2 and index_returns[-1] < -0.03:
+        stress_scenario = 1
+    elif beta < 0.8 and index_returns[-1] > 0.03:
+        stress_scenario = -1
+        
+    return {'beta': beta, 'stress': stress_scenario}
+
+#量化方法
+##动态权重调整算法：
+def dynamic_weight_adjustment(market_volatility):
+    """
+    根据市场波动率动态调整因子权重
+    Args:
+        market_volatility: 波动率指数（如VIX）
+    Returns:
+        调整后的权重字典
+    """
+    base_weights = {
+        'momentum': 0.20,
+        'volatility': 0.15,
+        # ...其他基础权重
+    }
+    
+    if market_volatility > 30:
+        # 高波动率市场增加风险因子权重
+        adjusted = {
+            'volatility': base_weights['volatility'] * 1.5,
+            'drawdown': base_weights['drawdown'] * 1.3,
+            'momentum': base_weights['momentum'] * 0.8
+        }
+    elif market_volatility < 15:
+        # 低波动市场增加趋势因子权重
+        adjusted = {
+            'momentum': base_weights['momentum'] * 1.2,
+            'adx': base_weights['adx'] * 1.1,
+            'volatility': base_weights['volatility'] * 0.7
+        }
+    else:
+        adjusted = base_weights
+        
+    return adjusted
+
+##状态空间模型应用：
+from statsmodels.tsa.statespace.sarimax import SARIMAX
+
+class TrendStateModel:
+    def __init__(self, order=(1,1,1)):
+        self.model = SARIMAX(endog=[], order=order)
+        
+    def update(self, prices):
+        try:
+            self.model = self.model.extend(prices)
+            res = self.model.fit(disp=False)
+            state = res.get_prediction().predicted_mean[-1]
+            return state
+        except:
+            return np.nan
+
+##风险控制矩阵
+def risk_control_matrix(score, alerts):
+    """
+    综合风险控制决策
+    Returns:
+        tuple: (建议仓位, 风险等级)
+    """
+    if score > 0.8 and not alerts:
+        return (1.0, '低风险')  # 满仓
+    elif score > 0.6 and len(alerts) < 2:
+        return (0.7, '中风险')
+    elif score > 0.4 or 'VOLATILITY_SPIKE' in alerts:
+        return (0.5, '高风险')
+    else:
+        return (0.3, '极高风险')
+
+#非正交指标的权重优化方法论
+##阶段一：协方差矩阵加权
+def covariance_weighting(factors_df):
+    """
+    基于逆协方差矩阵的权重分配
+    :param factors_df: 因子值DataFrame
+    :return: 优化后权重向量
+    """
+    cov_matrix = factors_df.cov()
+    inv_cov = np.linalg.pinv(cov_matrix)  # 伪逆矩阵处理奇异值
+    marginal_risk = 1 / np.diag(inv_cov)
+    return marginal_risk / marginal_risk.sum()
+
+##阶段二：动态条件相关模型
+from arch import arch_model
+
+class DCCWeightOptimizer:
+    def __init__(self, lookback=60):
+        self.lookback = lookback
+        
+    def fit(self, returns_df):
+        """拟合DCC-GARCH模型"""
+        self.model = arch_model(returns_df, mean='Zero', vol='Garch', p=1, q=1)
+        self.results = self.model.fit(disp='off')
+        
+    def get_weights(self):
+        """提取动态条件相关矩阵"""
+        corr = self.results.dynamic_correlation()
+        latest_corr = corr[-1]
+        inv_corr = np.linalg.inv(latest_corr)
+        return inv_corr.diagonal() / inv_corr.diagonal().sum()
+
+##阶段三：神经网络特征解耦
+import torch
+import torch.nn as nn
+
+class FactorDisentangler(nn.Module):
+    def __init__(self, input_dim=6, hidden_dim=16):
+        super().__init__()
+        self.encoder = nn.Sequential(
+            nn.Linear(input_dim, hidden_dim),
+            nn.ELU(),
+            nn.Linear(hidden_dim, hidden_dim)
+        self.decoder = nn.Linear(hidden_dim, input_dim)
+        
+    def forward(self, x):
+        z = self.encoder(x)
+        return self.decoder(z)
+        
+# 训练目标：最小化重构损失的同时最大化隐变量正交性
+ortho_loss = torch.abs(z.T @ z - torch.eye(z.shape[1])  # 强制正交约束

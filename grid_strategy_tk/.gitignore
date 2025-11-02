@@ -1,0 +1,35 @@
+# 忽略缓存目录
+data/cache/
+data/results/
+
+# 保留目录但忽略内容
+!data/cache/.gitkeep
+!data/results/.gitkeep
+
+# 忽略日志文件
+logs/
+*.log
+
+# Python编译缓存
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 打包和构建目录
+build/
+dist/
+*.spec
+!build_config.spec
+
+# 测试覆盖率
+.coverage
+.pytest_cache/
+
+# IDE相关
+.idea/
+.vscode/
+*.swp
+
+# 系统文件
+.DS_Store
+Thumbs.db 

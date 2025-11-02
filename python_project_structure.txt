@@ -1,0 +1,57 @@
+your_project/
+├── src/                    # 源代码目录
+│   ├── __init__.py
+│   ├── core/              # 核心功能
+│   │   ├── __init__.py
+│   │   └── config.py      # 配置管理
+│   └── views/             # 视图定义
+│   │   ├── __init__.py
+│   ├── api/               # API接口
+│   │   ├── __init__.py
+│   │   ├── routes/        # 路由
+│   │   └── endpoints/     # 端点实现
+│   ├── models/            # 数据模型
+│   │   ├── __init__.py
+│   │   └── entities/      # 实体类
+│   ├── services/          # 业务逻辑
+│   │   ├── __init__.py
+│   │   └── business/      # 业务实现
+│   └── utils/             # 工具函数
+│       └── __init__.py
+├── tests/                 # 测试目录
+│   ├── __init__.py
+│   ├── conftest.py       # 测试配置
+│   ├── unit/             # 单元测试
+│   └── integration/      # 集成测试
+├── demo/                  # 演示应用
+│   └── examples/         # 示例代码
+├── docs/                 # 文档
+│   ├── api/             # API文档
+│   └── guides/          # 使用指南
+├── resources/            #资源 
+├   └── data/                # 数据文件
+│   └── assets/         # 静态资源如图像
+│   └── localization/   # 国际化
+│   └── static/             # 静态资源
+│      ├── css/
+│      └── js/
+├── requirements.txt       # 基础依赖
+├── scripts/           # 脚本工具
+├── .env.example       # 环境变量示例
+├── README.md          # 项目说明
+├── setup.py          # 安装配置
+└── pytest.ini        # 测试配置
+
+
+# 特点：
+1. 模块化组织，职责分明
+2. 适用于各种Python Web框架
+3. 便于测试和维护
+4. 符合Python最佳实践
+5. 易于部署和扩展
+
+# 迁移注意事项：
+1. api/ 目录需要根据具体框架调整
+2. requirements 中的依赖需要更新
+3. 框架特定的配置文件需要修改
+4. 其他业务逻辑代码可直接复用 

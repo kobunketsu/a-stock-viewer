@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.coverage
+
+# 数据导出目录
+data/export/
+
+# 忽略日志文件
+logs/
+*.log
+
+.qodo

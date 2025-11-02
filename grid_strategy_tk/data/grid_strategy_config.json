@@ -1,0 +1,17 @@
+{
+    "symbol": "002990",
+    "symbol_name": "盛视科技",
+    "start_date": "2025-01-30",
+    "end_date": "2025-02-18",
+    "ma_period": "55",
+    "ma_protection": true,
+    "initial_positions": "9400",
+    "initial_cash": "10000",
+    "min_buy_times": "2",
+    "price_range_min": "23.820",
+    "price_range_max": "30.000",
+    "n_trials": "50",
+    "top_n": "5",
+    "profit_calc_method": "mean",
+    "connect_segments": false
+}

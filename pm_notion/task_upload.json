@@ -1,0 +1,213 @@
+[
+    {
+        "title": "股票代码输入与验证",
+        "description": "实现股票代码输入框，支持模糊搜索和代码验证",
+        "priority": "高",
+        "duration": 2,
+        "subtasks": [
+            {
+                "title": "股票代码输入框UI实现",
+                "description": "使用Element Plus的Input组件实现股票代码输入框",
+                "priority": "高",
+                "duration": 1,
+                "status": "已完成"
+            },
+            {
+                "title": "股票代码模糊搜索",
+                "description": "实现股票代码和名称的模糊搜索功能",
+                "priority": "高",
+                "duration": 1,
+                "status": "已完成"
+            },
+            {
+                "title": "股票代码格式验证",
+                "description": "实现股票代码格式的前端验证",
+                "priority": "高",
+                "duration": 1,
+                "status": "已完成"
+            }
+        ]
+    },
+    {
+        "title": "时间范围设置",
+        "description": "实现时间范围选择器，支持自定义时间段",
+        "priority": "高",
+        "duration": 1,
+        "subtasks": [
+            {
+                "title": "日期选择器组件实现",
+                "description": "使用Element Plus的DatePicker组件实现日期范围选择",
+                "priority": "高",
+                "duration": 1,
+                "status": "已完成"
+            },
+            {
+                "title": "时间范围验证",
+                "description": "实现时间范围的合法性验证",
+                "priority": "高",
+                "duration": 1,
+                "status": "已完成"
+            }
+        ]
+    },
+    {
+        "title": "持仓和资金设置",
+        "description": "实现持仓数量和资金额度的输入及验证",
+        "priority": "高",
+        "duration": 1,
+        "subtasks": [
+            {
+                "title": "资金输入组件实现",
+                "description": "使用Element Plus的InputNumber组件实现资金输入",
+                "priority": "高",
+                "duration": 1,
+                "status": "已完成"
+            },
+            {
+                "title": "持仓数量输入实现",
+                "description": "实现持仓数量的输入和验证",
+                "priority": "高",
+                "duration": 1,
+                "status": "已完成"
+            }
+        ]
+    },
+    {
+        "title": "网格参数优化",
+        "description": "实现网格策略参数的优化算法，包括买入卖出点和交易数量的计算",
+        "priority": "高",
+        "duration": 5,
+        "subtasks": [
+            {
+                "title": "参数优化算法实现",
+                "description": "实现基于Optuna的网格策略参数优化算法",
+                "priority": "高",
+                "duration": 2,
+                "status": "进行中"
+            },
+            {
+                "title": "买入点计算逻辑",
+                "description": "实现网格买入点的计算逻辑",
+                "priority": "高",
+                "duration": 2,
+                "status": "未开始"
+            },
+            {
+                "title": "卖出点计算逻辑",
+                "description": "实现网格卖出点的计算逻辑",
+                "priority": "高",
+                "duration": 2,
+                "status": "未开始"
+            },
+            {
+                "title": "交易数量计算",
+                "description": "实现每个网格的交易数量计算",
+                "priority": "高",
+                "duration": 1,
+                "status": "未开始"
+            }
+        ]
+    },
+    {
+        "title": "结果展示",
+        "description": "实现优化结果的展示界面，包括收益排名和参数详情",
+        "priority": "中",
+        "duration": 3,
+        "subtasks": [
+            {
+                "title": "结果列表组件",
+                "description": "使用Element Plus的Table组件实现结果列表",
+                "priority": "中",
+                "duration": 1,
+                "status": "未开始"
+            },
+            {
+                "title": "收益排名展示",
+                "description": "实现收益率排名的展示功能",
+                "priority": "中",
+                "duration": 1,
+                "status": "未开始"
+            },
+            {
+                "title": "参数详情展示",
+                "description": "实现参数组合的详细信息展示",
+                "priority": "中",
+                "duration": 1,
+                "status": "未开始"
+            }
+        ]
+    },
+    {
+        "title": "K线图展示",
+        "description": "实现带有交易点的K线图展示功能",
+        "priority": "中",
+        "duration": 4,
+        "subtasks": [
+            {
+                "title": "K线图基础组件",
+                "description": "使用ECharts实现基础K线图组件",
+                "priority": "中",
+                "duration": 2,
+                "status": "未开始"
+            },
+            {
+                "title": "交易点标记",
+                "description": "在K线图上标记买入卖出点",
+                "priority": "中",
+                "duration": 1,
+                "status": "未开始"
+            },
+            {
+                "title": "图表交互功能",
+                "description": "实现K线图的缩放和数据提示功能",
+                "priority": "中",
+                "duration": 1,
+                "status": "未开始"
+            }
+        ]
+    },
+    {
+        "title": "交割单信息",
+        "description": "实现交易明细和统计信息的展示功能",
+        "priority": "低",
+        "duration": 2,
+        "subtasks": [
+            {
+                "title": "交易明细表格",
+                "description": "实现交易明细的表格展示",
+                "priority": "低",
+                "duration": 1,
+                "status": "未开始"
+            },
+            {
+                "title": "统计信息展示",
+                "description": "实现交易统计信息的展示",
+                "priority": "低",
+                "duration": 1,
+                "status": "未开始"
+            }
+        ]
+    },
+    {
+        "title": "参数组合收藏",
+        "description": "实现参数组合的收藏和加载功能",
+        "priority": "低",
+        "duration": 2,
+        "subtasks": [
+            {
+                "title": "收藏功能实现",
+                "description": "实现参数组合的收藏功能",
+                "priority": "低",
+                "duration": 1,
+                "status": "未开始"
+            },
+            {
+                "title": "收藏列表管理",
+                "description": "实现收藏参数组合的管理功能",
+                "priority": "低",
+                "duration": 1,
+                "status": "未开始"
+            }
+        ]
+    }
+] 
