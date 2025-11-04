@@ -1,0 +1,33 @@
+[
+  {
+    "code": "600519",
+    "name": "贵州茅台",
+    "tags": [
+      "白酒",
+      "消费"
+    ],
+    "last_price": 1672.32,
+    "change_percent": 1.2,
+    "signal": "bolling_breakout"
+  },
+  {
+    "code": "000001",
+    "name": "平安银行",
+    "tags": [
+      "金融"
+    ],
+    "last_price": 12.45,
+    "change_percent": -0.8,
+    "signal": "oversold"
+  },
+  {
+    "code": "510300",
+    "name": "沪深300ETF",
+    "tags": [
+      "ETF"
+    ],
+    "last_price": 4.12,
+    "change_percent": 0.35,
+    "signal": "trend_up"
+  }
+]

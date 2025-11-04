@@ -10,3 +10,7 @@ logs/
 *.log
 
 .qodo
+
+# Web版本依赖目录
+web_version/frontend/node_modules/
+web_version/backend/.venv/
