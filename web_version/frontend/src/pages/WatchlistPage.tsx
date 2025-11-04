@@ -57,10 +57,10 @@ function WatchlistPage() {
   const [selectedRowKeys, setSelectedRowKeys] = useState<string[]>([])
 
   const { data: watchlists } = useWatchlists()
-  const { mutateAsync: createWatchlist, isLoading: creatingList } = useCreateWatchlist()
-  const { mutateAsync: deleteWatchlist, isLoading: deletingList } = useDeleteWatchlist()
-  const { mutateAsync: addSymbol, isLoading: addingSymbol } = useAddSymbol()
-  const { mutateAsync: removeSymbol, isLoading: removingSymbol } = useRemoveSymbol()
+  const { mutateAsync: createWatchlist, isPending: creatingList } = useCreateWatchlist()
+  const { mutateAsync: deleteWatchlist, isPending: deletingList } = useDeleteWatchlist()
+  const { mutateAsync: addSymbol, isPending: addingSymbol } = useAddSymbol()
+  const { mutateAsync: removeSymbol, isPending: removingSymbol } = useRemoveSymbol()
 
   const currentMeta: WatchlistMeta | undefined = useMemo(() => {
     return watchlists?.find((item) => item.name === currentList)
@@ -218,6 +218,12 @@ function WatchlistPage() {
   const columns = useMemo(() => {
     return [
       {
+        title: '名称',
+        dataIndex: 'name',
+        key: 'name',
+        width: 160
+      },
+      {
         title: '代码',
         dataIndex: 'code',
         key: 'code',
@@ -225,40 +231,106 @@ function WatchlistPage() {
         render: (code: string) => <Typography.Text code>{code}</Typography.Text>
       },
       {
-        title: '名称',
-        dataIndex: 'name',
-        key: 'name',
-        width: 160
+        title: '行业',
+        dataIndex: ['quote', 'industry'],
+        key: 'industry',
+        width: 120,
+        render: (_: unknown, record: WatchlistSymbol) => renderText(record.quote?.industry)
       },
       {
         title: '最新价',
         dataIndex: ['quote', 'last_price'],
         key: 'last_price',
+        width: 100,
         render: (_: unknown, record: WatchlistSymbol) => formatNumber(record.quote?.last_price)
       },
       {
         title: '涨跌幅',
         dataIndex: ['quote', 'change_percent'],
         key: 'change_percent',
-        render: (_: unknown, record: WatchlistSymbol) => renderChange(record.quote?.change_percent)
+        width: 110,
+        render: (_: unknown, record: WatchlistSymbol) => renderPercent(record.quote?.change_percent)
+      },
+      {
+        title: '股价成本涨幅',
+        dataIndex: ['quote', 'cost_change'],
+        key: 'cost_change',
+        width: 140,
+        render: (_: unknown, record: WatchlistSymbol) => renderPercent(record.quote?.cost_change, 1)
+      },
+      {
+        title: 'MA5偏离',
+        dataIndex: ['quote', 'ma5_deviation'],
+        key: 'ma5_deviation',
+        width: 120,
+        render: (_: unknown, record: WatchlistSymbol) => renderPercent(record.quote?.ma5_deviation, 1)
+      },
+      {
+        title: '次日板MA5偏离',
+        dataIndex: ['quote', 'next_day_limit_up_ma5_deviation'],
+        key: 'next_day_limit_up_ma5_deviation',
+        width: 160,
+        render: (_: unknown, record: WatchlistSymbol) => renderPercent(record.quote?.next_day_limit_up_ma5_deviation, 1)
+      },
+      {
+        title: '日内趋势',
+        dataIndex: ['quote', 'intraday_trend'],
+        key: 'intraday_trend',
+        width: 120,
+        render: (_: unknown, record: WatchlistSymbol) => renderText(record.quote?.intraday_trend)
+      },
+      {
+        title: '日趋势',
+        dataIndex: ['quote', 'day_trend'],
+        key: 'day_trend',
+        width: 100,
+        render: (_: unknown, record: WatchlistSymbol) => renderText(record.quote?.day_trend)
+      },
+      {
+        title: '周趋势',
+        dataIndex: ['quote', 'week_trend'],
+        key: 'week_trend',
+        width: 100,
+        render: (_: unknown, record: WatchlistSymbol) => renderText(record.quote?.week_trend)
+      },
+      {
+        title: '月趋势',
+        dataIndex: ['quote', 'month_trend'],
+        key: 'month_trend',
+        width: 100,
+        render: (_: unknown, record: WatchlistSymbol) => renderText(record.quote?.month_trend)
+      },
+      {
+        title: '股东增幅',
+        dataIndex: ['quote', 'holders_change'],
+        key: 'holders_change',
+        width: 120,
+        render: (_: unknown, record: WatchlistSymbol) => renderPercent(record.quote?.holders_change, 1)
+      },
+      {
+        title: '持股增幅',
+        dataIndex: ['quote', 'capita_change'],
+        key: 'capita_change',
+        width: 120,
+        render: (_: unknown, record: WatchlistSymbol) => renderPercent(record.quote?.capita_change, 1)
       },
       {
         title: '消息',
         dataIndex: ['quote', 'message'],
         key: 'message',
-        width: 220,
-        render: (_: unknown, record: WatchlistSymbol) => record.quote?.message ?? '-'
+        width: 240,
+        render: (_: unknown, record: WatchlistSymbol) => renderText(record.quote?.message)
       },
       {
         title: '信号',
         dataIndex: ['quote', 'signal_level'],
         key: 'signal_level',
-        width: 100,
+        width: 120,
         render: (_: unknown, record: WatchlistSymbol) =>
           record.quote?.signal_level ? <Tag color="blue">{record.quote.signal_level}</Tag> : '-'
       }
     ]
-  }, [tableData])
+  }, [])
 
   useHotkeys([
     {
@@ -361,7 +433,7 @@ function WatchlistPage() {
           dataSource={tableData}
           pagination={false}
           rowSelection={{ selectedRowKeys, onChange: (keys) => setSelectedRowKeys(keys.map((key) => String(key))) }}
-          scroll={{ x: true }}
+          scroll={{ x: 1600 }}
         />
       </Card>
 
@@ -438,15 +510,21 @@ function formatNumber(value?: number | null) {
   return value.toFixed(2)
 }
 
-function renderChange(value?: number | null) {
+function renderPercent(value?: number | null, fractionDigits = 2) {
   if (value === null || value === undefined) return '-'
   const color = value > 0 ? 'danger' : value < 0 ? 'success' : undefined
   return (
     <Typography.Text type={color}>
       {value > 0 ? '+' : ''}
-      {value.toFixed(2)}%
+      {value.toFixed(fractionDigits)}%
     </Typography.Text>
   )
+}
+
+function renderText(value?: string | null) {
+  if (value === null || value === undefined) return '-'
+  const trimmed = value.trim()
+  return trimmed.length > 0 ? trimmed : '-'
 }
 
 export default WatchlistPage
