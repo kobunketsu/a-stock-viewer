@@ -32,6 +32,33 @@ def test_add_and_fetch_symbols(tmp_path: Path) -> None:
     assert symbols[0].name == "浦发银行"
 
 
+def test_watchlist_quotes_include_extended_fields(tmp_path: Path) -> None:
+    service = make_service(tmp_path)
+    service.create_watchlist("扩展字段")
+    service.add_symbol("扩展字段", "600519", "贵州茅台")
+
+    symbols = service.get_watchlist_symbols("扩展字段", with_quotes=True)
+    assert symbols and symbols[0].quote is not None
+
+    quote = symbols[0].quote
+    payload = quote.dict()
+    for key in (
+        "industry",
+        "cost_change",
+        "ma5_deviation",
+        "next_day_limit_up_ma5_deviation",
+        "intraday_trend",
+        "day_trend",
+        "week_trend",
+        "month_trend",
+        "holders_change",
+        "capita_change",
+        "message",
+        "signal_level",
+    ):
+        assert key in payload
+
+
 def test_remove_symbol(tmp_path: Path) -> None:
     service = make_service(tmp_path)
     service.create_watchlist("测试B")

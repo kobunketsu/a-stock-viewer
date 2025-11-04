@@ -85,6 +85,7 @@ class MarketDataProvider:
         self._code_meta_loaded_at: float = 0.0
         self._code_meta_ttl_seconds: int = 6 * 60 * 60
         self._quote_cooldown_until: float = 0.0
+        self._industry_cache = TTLCache(self._code_meta_ttl_seconds)
 
     # ------------------------------------------------------------------ Quotes
     def get_watchlist_quotes(self, codes: Iterable[str]) -> Dict[str, dict]:
@@ -156,16 +157,145 @@ class MarketDataProvider:
         quotes: Dict[str, dict] = {}
         for _, row in filtered.iterrows():
             code = str(row[code_column])
+            last_price = self._safe_float(row.get("最新价") or row.get("最新价(元)"))
+            change_percent = self._safe_float(row.get("涨跌幅") or row.get("涨跌幅(%)"))
+            metrics = self._compute_quote_metrics(code, last_price)
             quotes[code] = {
                 "code": code,
                 "name": row.get("名称") or row.get("股票名称") or code,
-                "last_price": float(row.get("最新价") or row.get("最新价(元)") or 0),
-                "change_percent": float(row.get("涨跌幅") or row.get("涨跌幅(%)") or 0),
+                "last_price": last_price,
+                "change_percent": change_percent,
+                "industry": self._resolve_industry(code, row),
+                "cost_change": metrics.get("cost_change"),
+                "ma5_deviation": metrics.get("ma5_deviation"),
+                "next_day_limit_up_ma5_deviation": metrics.get("next_day_limit_up_ma5_deviation"),
+                "intraday_trend": self._resolve_intraday_trend(change_percent),
+                "day_trend": metrics.get("day_trend"),
+                "week_trend": metrics.get("week_trend"),
+                "month_trend": metrics.get("month_trend"),
+                "holders_change": metrics.get("holders_change"),
+                "capita_change": metrics.get("capita_change"),
+                "message": None,
                 "signal": None,
+                "signal_level": None,
             }
         if quotes:
             self._quote_cooldown_until = 0.0
         return quotes
+
+    def _safe_float(self, value: object) -> float:
+        try:
+            if value is None:
+                return 0.0
+            return float(value)
+        except (TypeError, ValueError):
+            return 0.0
+
+    def _resolve_industry(self, code: str, row: pd.Series) -> Optional[str]:
+        for column in ("行业", "所属行业", "行业名称", "板块"):
+            industry = row.get(column)
+            if isinstance(industry, str) and industry.strip():
+                return industry.strip()
+
+        cached = self._industry_cache.get(code)
+        if isinstance(cached, str) and cached:
+            return cached
+
+        try:
+            import akshare as ak  # type: ignore
+        except Exception:
+            return None
+
+        if not hasattr(ak, "stock_individual_info_em"):
+            return None
+
+        try:
+            info = ak.stock_individual_info_em(symbol=code)
+        except Exception:
+            return None
+
+        if info is None or info.empty:
+            return None
+
+        try:
+            industry_series = info.loc[info["item"] == "行业", "value"]
+        except Exception:
+            return None
+
+        if industry_series.empty:
+            return None
+
+        industry_value = industry_series.iloc[0]
+        if isinstance(industry_value, str) and industry_value.strip():
+            industry = industry_value.strip()
+            self._industry_cache.set(code, industry)
+            return industry
+        return None
+
+    def _resolve_intraday_trend(self, change_percent: float) -> Optional[str]:
+        if change_percent == 0:
+            return "盘整"
+        if change_percent > 0:
+            return "上涨" if change_percent >= 1 else "偏强"
+        if change_percent < 0:
+            return "下跌" if change_percent <= -1 else "偏弱"
+        return None
+
+    def _compute_quote_metrics(self, code: str, last_price: float) -> Dict[str, Optional[object]]:
+        metrics: Dict[str, Optional[object]] = {}
+        df = self.get_daily_kline(code, days=60)
+        if df is None or df.empty or "close" not in df.columns:
+            return metrics
+
+        closes = df["close"].dropna()
+        if closes.empty:
+            return metrics
+
+        current = float(closes.iloc[-1])
+        price = last_price or current
+
+        ma5 = closes.tail(5).mean() if len(closes) >= 5 else None
+        if ma5 is not None:
+            metrics["ma5_deviation"] = self._percent_change(price, float(ma5))
+            metrics["next_day_limit_up_ma5_deviation"] = self._percent_change(price * 1.1, float(ma5))
+
+        avg_cost = closes.tail(10).mean() if len(closes) >= 10 else None
+        if avg_cost is not None:
+            metrics["cost_change"] = self._percent_change(price, float(avg_cost))
+
+        metrics["day_trend"] = self._trend_from_history(closes, 1)
+        metrics["week_trend"] = self._trend_from_history(closes, 5)
+        metrics["month_trend"] = self._trend_from_history(closes, 20)
+
+        metrics["holders_change"] = None
+        metrics["capita_change"] = None
+        return metrics
+
+    def _percent_change(self, current: float, base: float) -> Optional[float]:
+        if base is None or base == 0:
+            return None
+        try:
+            return round((current - base) / base * 100, 2)
+        except Exception:
+            return None
+
+    def _trend_from_history(self, closes: pd.Series, offset: int) -> Optional[str]:
+        if len(closes) <= offset:
+            return None
+        try:
+            current = float(closes.iloc[-1])
+            base = float(closes.iloc[-1 - offset])
+        except Exception:
+            return None
+
+        if base == 0:
+            return None
+        change = (current - base) / base * 100
+        if change >= 5:
+            return "多头"
+        if change <= -5:
+            return "空头"
+        return "震荡"
 
     # ------------------------------------------------------------------ Code search helpers
     def lookup_symbol_name(self, code: str) -> Optional[str]:
@@ -216,14 +346,34 @@ class MarketDataProvider:
     def _generate_sample_quotes(self, codes: List[str]) -> Dict[str, dict]:
         quotes: Dict[str, dict] = {}
         base_price = 100.0
+        industries = ['科技', '消费', '金融', '医药']
+        intraday_states = ['上涨', '盘整', '下跌', '关注']
+        trend_states = ['多头', '震荡', '空头']
         for idx, code in enumerate(codes, start=1):
             change = ((idx % 5) - 2) * 1.23
+            cost_change = ((idx % 7) - 3) * 1.1
+            ma5_dev = ((idx % 5) - 2) * 0.6
+            next_day_dev = ((idx % 6) - 3) * 0.8
+            holders_change = ((idx % 9) - 4) * 0.7
+            capita_change = ((idx % 11) - 5) * 0.5
             quotes[code] = {
                 "code": code,
                 "name": f"{code}示例",
                 "last_price": round(base_price + idx * 1.5, 2),
                 "change_percent": round(change, 2),
+                "industry": industries[idx % len(industries)],
+                "cost_change": round(cost_change, 2),
+                "ma5_deviation": round(ma5_dev, 2),
+                "next_day_limit_up_ma5_deviation": round(next_day_dev, 2),
+                "intraday_trend": intraday_states[idx % len(intraday_states)],
+                "day_trend": trend_states[idx % len(trend_states)],
+                "week_trend": trend_states[(idx + 1) % len(trend_states)],
+                "month_trend": trend_states[(idx + 2) % len(trend_states)],
+                "holders_change": round(holders_change, 2),
+                "capita_change": round(capita_change, 2),
+                "message": "示例数据仅供演示",
                 "signal": "mock" if change > 0 else None,
+                "signal_level": "示例信号" if change > 2 else None,
             }
         return quotes
 
