@@ -3860,37 +3860,23 @@ class IntradayWindow:
 
 
     def _set_axis_xlim(self, ax, x_times):
-        """设置轴的x轴范围，根据当前时间使用固定时间范围"""
+        """设置轴的x轴范围，固定显示完整交易时间段 09:30-11:30, 13:00-15:00"""
         if ax is None:
             return
             
-        # 获取当前时间，判断应该显示的时间范围
-        current_time = datetime.now().time()
-        
-        # 检查是否为非交易日（通过检查trade_date是否为今天）
-        is_trading_day = self.trade_date == date.today()
-        
-        # 定义时间范围
-        if not is_trading_day:
-            # 非交易日，显示09:30-15:00
-            start_time = datetime.strptime("09:30", "%H:%M").time()
-            end_time = datetime.strptime("15:00", "%H:%M").time()
-            print(f"[DEBUG] 非交易日，显示时间范围: 09:30-15:00")
-        elif current_time < datetime.strptime("11:30", "%H:%M").time():
-            # 上午11:30之前，显示09:30-11:30
-            start_time = datetime.strptime("09:30", "%H:%M").time()
-            end_time = datetime.strptime("11:30", "%H:%M").time()
-            print(f"[DEBUG] 当前时间 {current_time.strftime('%H:%M')} < 11:30，显示时间范围: 09:30-11:30")
-        else:
-            # 下午1:30开始，显示09:30-15:00
-            start_time = datetime.strptime("09:30", "%H:%M").time()
-            end_time = datetime.strptime("15:00", "%H:%M").time()
-            print(f"[DEBUG] 当前时间 {current_time.strftime('%H:%M')} >= 11:30，显示时间范围: 09:30-15:00")
+        # 固定时间范围：上午 09:30-11:30，下午 13:00-15:00
+        morning_start = datetime.strptime("09:30", "%H:%M").time()
+        morning_end = datetime.strptime("11:30", "%H:%M").time()
+        afternoon_start = datetime.strptime("13:00", "%H:%M").time()
+        afternoon_end = datetime.strptime("15:00", "%H:%M").time()
 
         def _is_in_display_range(ts: datetime) -> bool:
-            """判断时间是否在显示范围内"""
+            """判断时间是否在显示范围内（上午或下午交易时段）"""
             ts_time = ts.time()
-            return start_time <= ts_time <= end_time
+            # 判断是否在上午时段 09:30-11:30 或下午时段 13:00-15:00
+            in_morning = morning_start <= ts_time <= morning_end
+            in_afternoon = afternoon_start <= ts_time <= afternoon_end
+            return in_morning or in_afternoon
 
         # 计算显示范围对应的x轴范围
         display_start_idx = None
@@ -3911,37 +3897,23 @@ class IntradayWindow:
         ax.set_xlim(display_start_idx, display_end_idx)
 
     def _draw_time_grid(self, x_index, x_times):
-        """绘制时间轴刻度(每30分钟)，根据当前时间设置固定时间范围"""
+        """绘制时间轴刻度(每30分钟)，固定显示完整交易时间段 09:30-11:30, 13:00-15:00"""
         tick_positions: list[int] = []
         tick_labels: list[str] = []
         
-        # 获取当前时间，判断应该显示的时间范围
-        current_time = datetime.now().time()
-        
-        # 检查是否为非交易日（通过检查trade_date是否为今天）
-        is_trading_day = self.trade_date == date.today()
-        
-        # 定义时间范围
-        if not is_trading_day:
-            # 非交易日，显示09:30-15:00
-            start_time = datetime.strptime("09:30", "%H:%M").time()
-            end_time = datetime.strptime("15:00", "%H:%M").time()
-            print(f"[DEBUG] 非交易日，显示时间范围: 09:30-15:00")
-        elif current_time < datetime.strptime("11:30", "%H:%M").time():
-            # 上午11:30之前，显示09:30-11:30
-            start_time = datetime.strptime("09:30", "%H:%M").time()
-            end_time = datetime.strptime("11:30", "%H:%M").time()
-            print(f"[DEBUG] 当前时间 {current_time.strftime('%H:%M')} < 11:30，显示时间范围: 09:30-11:30")
-        else:
-            # 下午1:30开始，显示09:30-15:00
-            start_time = datetime.strptime("09:30", "%H:%M").time()
-            end_time = datetime.strptime("15:00", "%H:%M").time()
-            print(f"[DEBUG] 当前时间 {current_time.strftime('%H:%M')} >= 11:30，显示时间范围: 09:30-15:00")
+        # 固定时间范围：上午 09:30-11:30，下午 13:00-15:00
+        morning_start = datetime.strptime("09:30", "%H:%M").time()
+        morning_end = datetime.strptime("11:30", "%H:%M").time()
+        afternoon_start = datetime.strptime("13:00", "%H:%M").time()
+        afternoon_end = datetime.strptime("15:00", "%H:%M").time()
 
         def _is_in_display_range(ts: datetime) -> bool:
-            """判断时间是否在显示范围内"""
+            """判断时间是否在显示范围内（上午或下午交易时段）"""
             ts_time = ts.time()
-            return start_time <= ts_time <= end_time
+            # 判断是否在上午时段 09:30-11:30 或下午时段 13:00-15:00
+            in_morning = morning_start <= ts_time <= morning_end
+            in_afternoon = afternoon_start <= ts_time <= afternoon_end
+            return in_morning or in_afternoon
 
         def _is_tick_time(ts: datetime) -> bool:
             """判断是否为刻度时间（每30分钟）"""
