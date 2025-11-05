@@ -61,17 +61,73 @@ class KLinePoint(BaseModel):
     volume: float
 
 
+class BollingerBands(BaseModel):
+    upper: List[Optional[float]]
+    middle: List[Optional[float]]
+    lower: List[Optional[float]]
+
+
+class RSIIndicators(BaseModel):
+    rsi6: List[Optional[float]]
+    rsi12: List[Optional[float]]
+    rsi24: List[Optional[float]]
+
+
+class CostChangeSeries(BaseModel):
+    daily_change: List[Optional[float]]
+    cumulative_positive: List[Optional[float]]
+
+
+class MA5DeviationSeries(BaseModel):
+    up: List[Optional[float]]
+    down: List[Optional[float]]
+
+
+class SmartMoneySeries(BaseModel):
+    entity_change_3d: List[Optional[float]]
+    smart_profit_3d: List[Optional[float]]
+
+
+class FundFlowSeries(BaseModel):
+    institution: List[Optional[float]]
+    hot_money: List[Optional[float]]
+    retail: List[Optional[float]]
+    unit: Literal["shares", "amount"] = "shares"
+
+
+class VolumeIndicators(BaseModel):
+    predicted: Optional[float] = Field(None, description="基于盘中进度预测的当日成交量")
+
+
+class ChipDistribution(BaseModel):
+    concentration_70: List[Optional[float]]
+    concentration_90: List[Optional[float]]
+    cost_70_low: List[Optional[float]]
+    cost_70_high: List[Optional[float]]
+    cost_90_low: List[Optional[float]]
+    cost_90_high: List[Optional[float]]
+
+
+class KLineIndicators(BaseModel):
+    ma: Dict[str, List[Optional[float]]] = Field(default_factory=dict)
+    bollinger: BollingerBands
+    rsi: RSIIndicators
+    average_cost: List[Optional[float]]
+    cost_change: CostChangeSeries
+    ma5_deviation: MA5DeviationSeries
+    smart_money: SmartMoneySeries
+    volume: VolumeIndicators = Field(default_factory=VolumeIndicators)
+    fund_flow: Optional[FundFlowSeries] = None
+
+
 class KLineResponse(BaseModel):
     """日 K 接口返回体。"""
 
     code: str
     name: str
     kline: List[KLinePoint]
-    indicators: dict = Field(default_factory=dict, description="附加技术指标")
-    chip_distribution: dict = Field(
-        default_factory=dict,
-        description="筹码相关数据，需包含 70%/90% 集中度曲线",
-    )
+    indicators: KLineIndicators
+    chip_distribution: ChipDistribution
 
 
 class HealthStatus(BaseModel):
