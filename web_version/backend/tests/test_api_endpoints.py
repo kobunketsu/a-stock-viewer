@@ -55,6 +55,38 @@ def test_kline_endpoint(api_client: TestClient) -> None:
     assert payload["code"] == "600519"
     assert len(payload["kline"]) >= 60
 
+    indicators = payload["indicators"]
+    assert set(indicators["ma"].keys()) >= {"ma5", "ma10", "ma20", "ma250"}
+    assert len(indicators["ma"]["ma5"]) == len(payload["kline"])
+
+    boll = indicators["bollinger"]
+    assert {"upper", "middle", "lower"}.issubset(boll.keys())
+
+    rsi = indicators["rsi"]
+    assert {"rsi6", "rsi12", "rsi24"}.issubset(rsi.keys())
+
+    cost_change = indicators["cost_change"]
+    assert {"daily_change", "cumulative_positive"}.issubset(cost_change.keys())
+
+    ma5_dev = indicators["ma5_deviation"]
+    assert {"up", "down"}.issubset(ma5_dev.keys())
+
+    smart = indicators["smart_money"]
+    assert {"entity_change_3d", "smart_profit_3d"}.issubset(smart.keys())
+
+    fund_flow = indicators["fund_flow"]
+    assert {"institution", "hot_money", "retail", "unit"}.issubset(fund_flow.keys())
+
+    chip = payload["chip_distribution"]
+    assert {
+        "concentration_70",
+        "concentration_90",
+        "cost_70_low",
+        "cost_70_high",
+        "cost_90_low",
+        "cost_90_high",
+    }.issubset(chip.keys())
+
 
 def test_intraday_endpoint(api_client: TestClient) -> None:
     response = api_client.get("/intraday/600519")
